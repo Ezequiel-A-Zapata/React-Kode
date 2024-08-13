@@ -1,0 +1,30 @@
+.header{
+    display: flex;
+    width: 98%;
+    max-width: 100%;
+    position: fixed;
+    z-index: 1;
+    margin-top: 3%;
+}
+.menu-hamburguesa{
+    margin: 0;
+}
+.logo {
+    display: inline-block;
+    color: black;
+    font-family:"Bebas Neue", sans-serif;
+    font-size: 700%;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-top:-9px;
+    padding-left: 2%;
+    font-weight: 400;
+    line-height: 1;
+}
+.cesta-header{
+    margin-left: auto;
+    margin-top: 0;
+    align-self: flex-start;
+}
+
