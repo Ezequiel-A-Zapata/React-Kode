@@ -1,0 +1,25 @@
+
+.nav-bar{
+    width: 100vw;
+    background-color: aliceblue;
+    height: 100vh;
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    left: -100vw; // Inicialmente oculto fuera de la pantalla a la izquierda
+    transition: left 0.4s ease-in-out; // Transición suave
+    &.dshow{
+        left: 0; // Mueve el `nav-bar` a la vista cuando el menú está abierto
+    }    
+    .lista{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 4dvh;
+        margin-top: 2dvh;
+        .categorias-link{
+            font-family:"Bebas Neue", sans-serif;
+            font-size:x-large;
+        }
+    }
+}
