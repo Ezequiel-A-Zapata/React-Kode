@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import hamburgermenu from "../../assets/imagenes-react-kode/hamburgermenu_120234.png"
-import "./menu.scss"
+import "../componentes-css/menu.scss"
 import { collection, getDocs } from "firebase/firestore"
 import { db } from '../firebase/config-fb'
+import { Link } from 'react-router-dom'
 
 
 
@@ -12,8 +13,6 @@ function Menu() {
 
     const [categorias,setCategorias] = useState()
     
-    
-    console.log(categorias)
     
     
     useEffect(() => {
@@ -44,7 +43,7 @@ function Menu() {
                 <ul className='lista'>
                     {categorias ? categorias.map((categoria)=> {
                         return <li key={categoria.id} className='categorias-link'>
-                            <em>{categoria.nombre.toUpperCase()}</em>
+                            <Link onClick={toggleMenu} className="link-menu"to={`productos/${categoria.id}`}><em>{categoria.nombre.toUpperCase()}</em></Link>
                             </li>
                     }) : "cargando"}
                 </ul>

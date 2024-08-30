@@ -22,20 +22,23 @@
                 height: 100%;
             }
         }
-    
-    .logo {
-        display: flex;
-        color: black;
-        font-family:"Bebas Neue", sans-serif;
-        font-size: 700%;
-        margin: 2% 0 0 0;
-        padding-left: 2%;
-        font-weight: 400;
-        line-height: 1;
-        &:hover{
-            color: rgb(98, 98, 98);
+    .link-logo{
+        text-decoration: none;
+        .logo {
+            display: flex;
+            color: black;
+            font-family:"Bebas Neue", sans-serif;
+            font-size: 700%;
+            margin: 2% 0 0 0;
+            padding-left: 2%;
+            font-weight: 400;
+            line-height: 1;
+            &:hover{
+                color: rgb(98, 98, 98);
+            }
         }
     }
+
 }
     .cesta-header{
         margin-left: 30%;

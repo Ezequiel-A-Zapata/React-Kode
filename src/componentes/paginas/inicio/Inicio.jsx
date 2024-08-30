@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Inicio.scss"
+import "../../componentes-css/inicio.scss"
 import imagen1 from "../../../assets/imagenes-react-kode/imagen1.jpg";
 import imagen2 from "../../../assets/imagenes-react-kode/imagen2.jpg";
 import imagen4 from "../../../assets/imagenes-react-kode/imagen4.jpg";

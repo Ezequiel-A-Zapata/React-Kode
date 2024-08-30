@@ -6,6 +6,7 @@ import Inicio from './componentes/paginas/inicio/Inicio'
 import Footer from './componentes/footer/Footer'
 import Header2 from './componentes/header/Header2'
 import ItemListContainer from './componentes/paginas/inicio/ItemListContainer'
+import Cesta from './componentes/paginas/inicio/Cesta'
 
 function App() {
 
@@ -16,7 +17,8 @@ function App() {
       {/* <Header2></Header2> */}
       <Routes>
         <Route path='/' element={<Inicio />}></Route>
-        <Route path='/productos' element={<ItemListContainer/>}></Route>
+        <Route path='/productos/:CategoriaId' element={<ItemListContainer/>}></Route>
+        <Route path='/Cesta' element={<Cesta />} />
       </Routes>
       <Footer></Footer>
     </BrowserRouter>
