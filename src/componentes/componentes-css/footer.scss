@@ -3,18 +3,18 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-}
-.redes{
-    display:flex;
-    flex-flow: row wrap;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-        a {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size:x-small;
-            text-decoration: none;
-            color: black;
-            padding: 2%;
-        }
+    .redes{
+        display:flex;
+        flex-flow: row wrap;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+            a {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size:x-small;
+                text-decoration: none;
+                color: black;
+                padding: 2%;
+            }
+    }
 }

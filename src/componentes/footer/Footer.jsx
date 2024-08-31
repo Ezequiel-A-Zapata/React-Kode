@@ -4,6 +4,7 @@ import "../componentes-css/footer.scss"
 function Footer() {
     return (
         <section className='footer'>
+            <hr className='seprador-footer'></hr>
             <div className='redes'>
                 <a href="">INSTAGRAM</a>
                 <a href="">FACEBOOK</a>
