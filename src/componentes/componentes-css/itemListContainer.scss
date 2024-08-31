@@ -3,7 +3,7 @@
 .list-container{
     display: flex;
     flex-direction: column;
-    padding-top: 3vh;
+    padding-top: 15vh;
     gap: 2vh;
     .producto{
             margin:0;
@@ -18,7 +18,8 @@
         }
         .producto-nombre{
             font-family: "Neue-Helvetica", "Helvetica", "Arial", "sans-serif";
-            font-size: small;
+            font-size: x-small;
+            color: rgb(43, 43, 43);
             position: absolute;
             margin: 0;
             bottom: 5vh;
@@ -27,7 +28,8 @@
         .producto-precio{
             font-family: "Neue-Helvetica", "Helvetica", "Arial", "sans-serif";
             position: absolute;
-            font-size: smaller;
+            font-size: small;
+            color: rgb(43, 43, 43);
             margin: 0;
             bottom: 2vh;
             right: 8vw;
