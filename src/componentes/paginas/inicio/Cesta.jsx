@@ -2,7 +2,7 @@ import React from 'react'
 
 function Cesta() {
     return (
-        <div>Cesta</div>
+        <div>En Proceso...</div>
     )
 }
 

@@ -5,8 +5,11 @@ import imagen2 from "../../../assets/imagenes-react-kode/imagen2.jpg";
 import imagen4 from "../../../assets/imagenes-react-kode/imagen4.jpg";
 
 function Inicio() {
+
+
+    
     return (
-        <div>
+        <div className='inicio'>
             <img className='imagen' src={imagen2} alt="" />
             <img className='imagen' src={imagen1} alt="" />
             <img className='imagen' src={imagen4} alt="" />

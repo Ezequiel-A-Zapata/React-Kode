@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function CestaWidget() {
     return (
         <>
-            <Link to="/Cesta" className='cesta-header'>cesta</Link>
+            <Link to="/Cesta" className='cesta-header'>CESTA (0)</Link>
         </>
     )
 }

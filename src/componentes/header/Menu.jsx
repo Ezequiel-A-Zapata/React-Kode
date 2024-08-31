@@ -43,7 +43,7 @@ function Menu() {
                 <ul className='lista'>
                     {categorias ? categorias.map((categoria)=> {
                         return <li key={categoria.id} className='categorias-link'>
-                            <Link onClick={toggleMenu} className="link-menu"to={`productos/${categoria.id}`}><em>{categoria.nombre.toUpperCase()}</em></Link>
+                            <Link onClick={toggleMenu} className="link-menu"to={`productos/${categoria.id}`}>{categoria.nombre.toUpperCase()}</Link>
                             </li>
                     }) : "cargando"}
                 </ul>
