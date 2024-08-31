@@ -7,7 +7,7 @@
     position: fixed;
     top: 0;
     left: -100vw; // Inicialmente oculto fuera de la pantalla a la izquierda
-    transition: left 0.4s ease-in-out, opacity 0.4s ease-in-out; // Transición suave
+    transition: left 0.4s ease-in-out, opacity 0.4s ease-in; // Transición suave
     opacity: 0;
     &.dshow{
         opacity: 100;
@@ -21,8 +21,8 @@
         gap: 3dvh;
         height: 100%;
         margin-top: 0%;
-        border-top: solid rgb(190, 190, 190) 1px;
-        border-left:solid rgb(190, 190, 190) 1px ;
+        // border-top: solid rgb(190, 190, 190) 1px;
+        // border-left:solid rgb(190, 190, 190) 1px ;
         box-shadow: -7px 4px 20px 1px rgb(223, 223, 223);
         padding-top: 10%;
         padding-left: 7%;

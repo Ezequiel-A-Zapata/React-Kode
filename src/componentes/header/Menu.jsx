@@ -34,11 +34,11 @@ function Menu() {
     return (
         <>
             <button onClick={toggleMenu} className='boton-menu'>
-                <img className="imagen-menu" src={hamburgermenu} alt="" />
+            <i className="bi bi-list imagen-menu" style={{fontSize:"170%"}}></i>
             </button>
             <nav className={`nav-bar${menu ? ' dshow' : ''}`}>
-                <button onClick={toggleMenu} className='boton-menu'>
-                <img className="imagen-menu" src={hamburgermenu} alt="" />
+                <button onClick={toggleMenu} className='boton-menu '>
+                <i className="bi bi-x-lg" style={{fontSize:"170%"}}  ></i>
                 </button>
                 <ul className='lista'>
                     {categorias ? categorias.map((categoria)=> {
