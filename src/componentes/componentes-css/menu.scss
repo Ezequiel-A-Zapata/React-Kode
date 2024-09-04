@@ -16,9 +16,10 @@
     position: fixed;
     top: 0;
     left: -100vw; // Inicialmente oculto fuera de la pantalla a la izquierda
-    transition: left 0.4s ease-in-out, opacity 0.4s ease-in; // Transición suave
+    transition: left 0.5s ease-in-out, opacity 0.5s ease-in; // Transición suave
     opacity: 0;
     &.dshow{
+        transition: left 0.4s ease-in-out, opacity 0.4 ease-in;
         opacity: 1;
         left: 0; // Mueve el `nav-bar` a la vista cuando el menú está abierto
     }    
@@ -36,9 +37,11 @@
         // animation: desplegar 1s ease-in-out 10s;
         // animation-fill-mode: forwards;
         overflow: hidden;
-
+        &.dnone{
+            display: none;
+        }
         &.animating {
-            animation: desplegar 1s ease-in-out 0.4s forwards;
+            animation: desplegar 0.8s ease-in-out 0.35s forwards;
         }
         .categorias-link{
             font-family:"Neue-Helvetica", "Helvetica", "Arial", "sans-serif";

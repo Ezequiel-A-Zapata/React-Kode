@@ -32,9 +32,12 @@ function Menu() {
         if (!menu) {
             // Abre el menú y aplica la animación
             lista.current.classList.add('animating');
+            lista.current.classList.remove('dnone');
         } else {
             // Cierra el menú y elimina la animación (si es necesario)
+            lista.current.classList.add('dnone');
             lista.current.classList.remove('animating');
+            
         }
         
     }

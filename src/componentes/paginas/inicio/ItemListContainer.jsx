@@ -37,9 +37,12 @@ function ItemListContainer() {
             return (
                 <div className='producto' key={producto.id}>
                 <img className='producto-imagen' src={producto.imagen} alt={producto.nombre} />
-                <p className='producto-nombre'>{producto.nombre.toUpperCase()}</p>
-                <p className='producto-precio'>${producto.precio}</p>
-                <Link className='link-detail' to={`/producto/${producto.id}`}>Ver Mas</Link>
+                <div className='nombre-precio'>
+                    <p>{producto.nombre.toUpperCase()}</p>
+                    <p>${producto.precio}
+                        <button><i class="bi bi-bookmark"></i></button>
+                </p></div>
+                <Link className='link-detail' to={`/producto/${producto.id}`}><i className="bi bi-plus-square-fill" style={{fontSize:"80%",color:"#D3D3D3"}}></i></Link>
                 </div>)
         })
     : "cargando"

@@ -6,33 +6,44 @@
     padding-top: 15vh;
     gap: 2vh;
     .producto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
             margin:0;
+            margin-bottom: 3vh;
             position: relative;
             height: auto;
-            background-color:rgb(250, 250, 250);
             padding: 0%;
             box-shadow: -7px 4px 20px 1px rgb(208, 208, 208);
         .producto-imagen{
             width: 100vw;
             height: auto;
         }
-        .producto-nombre{
+        .nombre-precio{
             font-family: "Neue-Helvetica", "Helvetica", "Arial", "sans-serif";
+            color: rgb(43, 43, 43);
             font-size: x-small;
-            color: rgb(43, 43, 43);
-            position: absolute;
+            width: 100vw;
             margin: 0;
-            bottom: 5vh;
-            left: 3vw;
+            position: relative;
+            p{
+                margin-left: 4vw;
+                margin-bottom: 0.7vh;
+            }
+            button{
+                border: none;
+                background: none;
+                position: absolute;
+                right: 6vw;
+                bottom: 2vh;
+                i{
+                    margin: 0;
+                }
+            }
         }
-        .producto-precio{
-            font-family: "Neue-Helvetica", "Helvetica", "Arial", "sans-serif";
+        .link-detail{
             position: absolute;
-            font-size: small;
-            color: rgb(43, 43, 43);
-            margin: 0;
-            bottom: 2vh;
-            right: 8vw;
+            bottom: 9vh;
         }
     }
 
