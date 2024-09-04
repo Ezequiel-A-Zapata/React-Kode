@@ -1,0 +1,16 @@
+
+.container-sticky{
+    height: 20vh;
+    .header-2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0; /* Esto hace que el header se pegue a la parte superior cuando se desplaza */
+        z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+        background-color: rgb(236, 232, 232); /* Asegura que el fondo del header sea visible */
+        height: 10vh;
+        box-shadow: -2px 2px 15px 1px rgb(132, 132, 132); /* Opcional: agrega sombra para darle un efecto flotante */
+    }
+}
+

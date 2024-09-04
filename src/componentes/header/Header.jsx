@@ -16,7 +16,9 @@ function Header() {
             <Menu></Menu>
             <Link className='link-logo' to="/"><h1 className='logo'>KODE</h1></Link>
             </div>
+            <div className='contenedor-widget'>
             <CestaWidget></CestaWidget>
+            </div>
         </section>
     )
 }

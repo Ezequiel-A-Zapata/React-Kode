@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { db } from '../../firebase/config-fb'
 import { getDoc, doc } from "firebase/firestore"
 import { useParams } from 'react-router-dom';
-import ItemDetail from '../ItemDetail';
+import ItemDetail from '../../paginas/inicio/ItemDetail';
 
 
 

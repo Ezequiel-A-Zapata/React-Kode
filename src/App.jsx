@@ -14,8 +14,6 @@ function App() {
   return (
     <>
     <BrowserRouter>
-      <Header></Header>
-      {/* <Header2></Header2> */}
       <Routes>
         <Route path='/' element={<Inicio />}></Route>
         <Route path='/productos/:CategoriaId' element={<ItemListContainer/>}></Route>

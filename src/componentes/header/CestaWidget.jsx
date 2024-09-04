@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import "../componentes-css/cestaWidget.scss"
 
 function CestaWidget() {
     return (
         <>
-            <Link to="/Cesta" className='cesta-header'><i class="bi bi-bag" style={{fontSize:"180%",color:"gray"}}></i> 0</Link>
+            <Link to="/Cesta" className='cesta-header'><i class="bi bi-bag" style={{fontSize:"150%",color:"gray"}}></i> 0</Link>
         </>
     )
 }
