@@ -42,7 +42,7 @@ function ItemListContainer() {
                     <p>${producto.precio}
                         <button><i class="bi bi-bookmark" style={{fontSize:"110%",color:"gray"}}></i></button>
                 </p></div>
-                <Link className='link-detail' to={`/producto/${producto.id}`}><i className="bi bi-plus-square-fill" style={{fontSize:"80%",color:"#D3D3D3"}}></i></Link>
+                <Link className='link-detail' to={`/producto/${producto.id}`}><i className="bi bi-plus-square-fill" style={{fontSize:"90%",color:"#D3D3D3"}}></i></Link>
                 </div>)
         })
     : "cargando"

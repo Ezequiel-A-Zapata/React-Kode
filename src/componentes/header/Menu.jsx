@@ -45,11 +45,11 @@ function Menu() {
     return (
         <>
             <button  onClick={toggleMenu} className='boton-menu'>
-            <i className="bi bi-list imagen-menu" style={{fontSize:"200%",color:"gray"}}></i>
+            <i className="bi bi-list imagen-menu" style={{fontSize:"230%",color:"gray"}}></i>
             </button>
             <nav className={`nav-bar${menu ? ' dshow' : ''}`}>
                 <button onClick={toggleMenu} className='boton-menu '>
-                <i className="bi bi-x-lg" style={{fontSize:"180%",color:"gray"}}  ></i>
+                <i className="bi bi-x-lg" style={{fontSize:"200%",color:"gray"}}  ></i>
                 </button>
                 <ul ref={lista} className='lista'>
                     {categorias ? categorias.map((categoria)=> {
