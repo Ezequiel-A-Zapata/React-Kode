@@ -2,12 +2,17 @@ import React, { useEffect, useRef, useState } from 'react'
 import "../componentes-css/menu.scss"
 import { collection, getDocs } from "firebase/firestore"
 import { db } from '../firebase/config-fb'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 
 
 function Menu() {
-    const lista = useRef(null)
+
+    const { CategoriaId } = useParams();
+
+    const lista = useRef(null);
+    const links = useRef([]);
+    
     const [menu, setMenu] = useState(false);
 
 
@@ -25,18 +30,28 @@ function Menu() {
         
     }, [])
 
+useEffect (()=>{
+    links.current.forEach(link => {
+        if (link && link.getAttribute("href")=== `/productos/${CategoriaId}`) {
+            link.classList.add("rojo")
+        } else {
+            link.classList.remove("rojo")
+        }
+        
+    });
+},[CategoriaId,categorias])
 
     const toggleMenu = () => {
         setMenu(!menu)
         console.log(lista.current);
         if (!menu) {
             // Abre el menú y aplica la animación
-            lista.current.classList.add('animating');
+            lista.current.classList.add('animacion');
             lista.current.classList.remove('dnone');
         } else {
             // Cierra el menú y elimina la animación (si es necesario)
             lista.current.classList.add('dnone');
-            lista.current.classList.remove('animating');
+            lista.current.classList.remove('animacion');
             
         }
         
@@ -52,9 +67,9 @@ function Menu() {
                 <i className="bi bi-x-lg" style={{fontSize:"200%",color:"gray"}}  ></i>
                 </button>
                 <ul ref={lista} className='lista'>
-                    {categorias ? categorias.map((categoria)=> {
+                    {categorias ? categorias.map((categoria,index)=> {
                         return <li key={categoria.id} className='categorias-link'>
-                            <Link onClick={toggleMenu} className="link-menu"to={`/productos/${categoria.id}`}>{categoria.nombre.toUpperCase()}</Link>
+                            <Link onClick={toggleMenu} ref={el => links.current[index] = el} className="link-menu"to={`/productos/${categoria.id}`}>{categoria.nombre.toUpperCase()}</Link>
                             </li>
                     }) : "cargando"}
                 </ul>

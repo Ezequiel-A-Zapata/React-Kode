@@ -22,7 +22,6 @@ function ItemListContainer() {
 
         getDocs(q)
             .then((res) => {
-                // const productosFiltrados = res.docs.filter(doc => doc.data().categoria.id === CategoriaId)
                 setProductos(res.docs.map((producto) => {
                     return { ...producto.data(), id: producto.id }
                 }))
@@ -43,12 +42,14 @@ function ItemListContainer() {
                             <div className='nombre-precio'>
                                 <p>{producto.nombre.toUpperCase()}</p>
                                 <p>${producto.precio}
-                                    <button><i class="bi bi-bookmark" style={{ fontSize: "110%", color: "gray" }}></i></button>
+                                    <button>
+                                        <i className="bi bi-bookmark" style={{ fontSize: "110%", color: "gray"}}></i>
+                                        </button>
                                 </p></div>
                             <Link className='link-detail' to={`/producto/${producto.id}`}><i className="bi bi-plus-square-fill" style={{ fontSize: "90%", color: "#D3D3D3" }}></i></Link>
                         </div>)
                 })
-                    : "cargando"
+                    : ""
                 }
             </section>
         </section>
