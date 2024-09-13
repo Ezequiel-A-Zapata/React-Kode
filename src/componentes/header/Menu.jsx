@@ -32,7 +32,7 @@ function Menu() {
 
 useEffect (()=>{
     links.current.forEach(link => {
-        if (link && link.getAttribute("href")=== `/productos/${CategoriaId}`) {
+        if (link.getAttribute("href") === `/productos/${CategoriaId}`) {
             link.classList.add("rojo")
         } else {
             link.classList.remove("rojo")
