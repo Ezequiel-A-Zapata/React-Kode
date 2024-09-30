@@ -15,7 +15,7 @@ function ItemDetailContainer() {
 
     useEffect(()=>{
 
-        const docRef= doc (db,"productos",ItemID);
+        const docRef= doc (db,"ProductosKode",ItemID);
         getDoc(docRef)
         .then(res => setItem({...res.data(), id: res.id}))
         

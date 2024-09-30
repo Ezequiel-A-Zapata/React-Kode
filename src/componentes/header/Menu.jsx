@@ -20,7 +20,7 @@ function Menu() {
     
     
     useEffect(() => {
-        const categoriasRef = collection(db,"categorias");
+        const categoriasRef = collection(db,"categoriasKode");
         getDocs(categoriasRef)
         .then((res)=>{
             setCategorias(res.docs.map((categoria)=>{

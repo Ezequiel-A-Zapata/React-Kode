@@ -16,7 +16,7 @@ function ItemListContainer() {
 
     useEffect(() => {
 
-        const productosRef = collection(db, "productos");
+        const productosRef = collection(db, "ProductosKode");
 
         const q = CategoriaId ? query(productosRef, where("categoria.id", "==", CategoriaId)) : "";
 
@@ -26,6 +26,9 @@ function ItemListContainer() {
                     return { ...producto.data(), id: producto.id }
                 }))
             })
+            .catch((error) => {
+                console.error("Error al obtener productos:", error);
+            });
 
     }, [CategoriaId])
 
@@ -38,15 +41,19 @@ function ItemListContainer() {
                 {productos ? productos.map((producto) => {
                     return (
                         <div className='producto' key={producto.id}>
-                            <img className='producto-imagen' src={producto.imagen} alt={producto.nombre} />
+                            {producto.imagenes && producto.imagenes.IMG1 ? (
+                                <img className='producto-imagen' src={producto.imagenes.IMG1} alt={producto.nombre} />
+                            ) : (
+                                <p>Imagen no disponible</p>
+                            )}
                             <div className='nombre-precio'>
                                 <p>{producto.nombre.toUpperCase()}</p>
                                 <p>${producto.precio}
                                     <button>
-                                        <i className="bi bi-bookmark" style={{ fontSize: "110%", color: "gray"}}></i>
-                                        </button>
+                                        <i className="bi bi-bookmark" style={{ fontSize: "110%", color: "gray" }}></i>
+                                    </button>
                                 </p></div>
-                            <Link className='link-detail' to={`/producto/${producto.id}`}><i className="bi bi-plus-square-fill" style={{ fontSize: "90%", color: "#D3D3D3" }}></i></Link>
+                            <Link className='link-detail' to={`/producto/${producto.id}`}><i className="bi bi-plus-square-fill" style={{ fontSize: "90%", color: "gray" }}></i></Link>
                         </div>)
                 })
                     : ""
