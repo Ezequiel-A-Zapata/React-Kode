@@ -3,14 +3,19 @@
     height: 10vh;
     .header-2 {
         display: flex;
+        width: 100vw;
         justify-content: space-between;
         align-items: center;
-        position: sticky;
+        position: fixed;
         top: 0; 
         z-index: 5; 
-        background-color: rgb(243, 240, 240); 
-        height: 6vh;
-        box-shadow: -2px 2px 15px 1px rgb(132, 132, 132); 
+        height: 6vh; 
+        background-color: white;
+        box-shadow: -2px 2px 15px 1px rgb(132, 132, 132);
+        &.transparente{
+            box-shadow: none;
+            background-color:transparent;
+        }
     }
 }
 

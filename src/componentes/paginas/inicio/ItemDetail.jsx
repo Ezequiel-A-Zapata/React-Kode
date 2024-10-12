@@ -1,37 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import "../../componentes-css/itemDetail.scss"
 import Header2 from '../../header/Header2';
+import { CartContext } from '../../../context/CartContext';
 function ItemDetail(props) {
 
     const { item } = props;
 
-    const [carrito, setCarrito] = useState([])
+    const {carrito,cantidad,handleSumar,handleRestar,handleAgregar}=useContext(CartContext)
     console.log(carrito)
-
-    const [cantidad, setCantidad] = useState(0)
-
-    const handleSumar = () => {
-        setCantidad(cantidad + 1)
-    }
-
-    const handleRestar = () => {
-        cantidad > 1 && setCantidad(cantidad - 1)
-    }
-    const handleAgregar = () => {
-
-        const itemAgregado = { ...item, cantidad }
-        const nuevoCarrito = [...carrito];
-        const estaEnElcarrito = nuevoCarrito.find((producto) => producto.id === itemAgregado.id);
-
-        if (estaEnElcarrito) {
-            estaEnElcarrito.cantidad = estaEnElcarrito.cantidad + cantidad;
-            setCarrito(nuevoCarrito);
-        } else {
-            setCarrito([nuevoCarrito, itemAgregado])
-        }
-
-    }
-
     const imagenes = item.imagenes;
 
 
@@ -49,10 +25,10 @@ function ItemDetail(props) {
                     </div>
                     <div className='display-cantidad'>
                         <p>CANTIDAD: {cantidad}</p>
-                        <button className='boton-sumar-restar' onClick={handleSumar}><i class="bi bi-plus-square-dotted"></i></button>
-                        <button className='boton-sumar-restar' onClick={handleRestar}><i class="bi bi-dash-square-dotted"></i></button>
+                        <button className='boton-sumar-restar' onClick={()=>{handleSumar(cantidad)}}><i className="bi bi-plus-square-dotted"></i></button>
+                        <button className='boton-sumar-restar' onClick={()=>{handleRestar(cantidad)}}><i className="bi bi-dash-square-dotted"></i></button>
                     </div>
-                    <button onClick={handleAgregar} className='botonDetail-anadir'> Añadir</button>
+                    <button onClick={()=>{handleAgregar(cantidad,item,carrito)}} className='botonDetail-anadir'> Añadir</button>
                     <div className='descripcion'>{item.descripcion}</div>
                 </section>
             </section>

@@ -6,11 +6,15 @@ import Footer from './componentes/footer/Footer'
 import ItemListContainer from './componentes/paginas/inicio/ItemListContainer'
 import Cesta from './componentes/paginas/inicio/Cesta'
 import ItemDetailContainer from './componentes/paginas/inicio/ItemDetailContainer'
+import { CartProvider } from './context/CartContext'
 
 function App() {
 
+
+
   return (
     <>
+    <CartProvider>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Inicio />}></Route>
@@ -20,6 +24,7 @@ function App() {
       </Routes>
       <Footer></Footer>
     </BrowserRouter>
+    </CartProvider>
     </>
   )
 }

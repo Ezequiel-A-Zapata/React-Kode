@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState, useEffect } from 'react'
 import { collection, getDocs, query, where } from "firebase/firestore"
 import { db } from '../../firebase/config-fb'
 import { Link, useParams } from 'react-router-dom';
 import "../../componentes-css/itemListContainer.scss"
 import Header2 from '../../header/Header2';
+import { CartContext } from '../../../context/CartContext';
 
 
 function ItemListContainer() {
+    
 
     const [productos, setProductos] = useState();
 
