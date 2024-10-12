@@ -20,12 +20,12 @@ export const CartProvider = ({children}) => {
     }
     const handleAgregar = (cantidad,item,carrito) => {
 
-        const itemAgregado = { ...item, cantidad }
+        const itemAgregado = { ...item, cantidad:1 }
         const nuevoCarrito = [...carrito];
         const estaEnElcarrito = nuevoCarrito.find((producto) => producto.id === itemAgregado.id);
 
         if (estaEnElcarrito) {
-            estaEnElcarrito.cantidad += cantidad;
+            estaEnElcarrito.cantidad += 1;
         } else {
             nuevoCarrito.push(itemAgregado)
         }
