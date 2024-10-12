@@ -10,7 +10,7 @@ const [isTransparent, setIsTransparent] = useState(false);  // Estado para gesti
 useEffect(() => {
 
   const handleScroll = () => {
-    const fixedElementPosition = 60;  // Esta es la posición (en píxeles) donde está el elemento fijo
+    const fixedElementPosition = 45;  // Esta es la posición (en píxeles) donde está el elemento fijo
     const scrollPosition = window.scrollY;  // Detecta la posición actual del scroll
 
     // Si hemos hecho scroll hasta la posición del elemento fijo, cambiamos el fondo a transparente
