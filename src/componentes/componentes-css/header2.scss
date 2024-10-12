@@ -12,9 +12,9 @@
         height: 6vh; 
         background-color: white;
         box-shadow: -2px 2px 15px 1px rgb(132, 132, 132);
-        transition: background-color 0.5s ease-in-out; 
+        transition: background-color 0.3s ease-in-out; 
         &.transparente{
-            transition: box-shadow 0.5s ease-in-out; 
+            transition: box-shadow 0.3s ease-in-out; 
             box-shadow: none;
             background-color:transparent;
         }
