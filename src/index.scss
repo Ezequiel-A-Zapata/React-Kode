@@ -3,13 +3,16 @@ html{
   margin: 0;
   padding: 0;
   width: 100%;
-  max-width: 100%;
+  max-width: 100%;  
+  
+  
 }
 body{
   margin: 0; /* Elimina márgenes del body */
   padding: 0;
   max-width: 100%;
   position: relative;
+  overflow-x: hidden;
 
 }
 .container{
