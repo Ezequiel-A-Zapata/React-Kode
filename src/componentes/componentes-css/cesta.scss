@@ -9,8 +9,8 @@
         font-size: xx-small;
         height: auto;
         background: none;
-        color: grey;
-        border: solid grey 1px;
+        color: rgb(75, 75, 75);
+        border: solid rgb(75, 75, 75) 1px;
     }
     .producto-cesta {
         display: grid;
@@ -32,7 +32,6 @@
             border-left: solid black 1px;
             display: flex;
             flex-direction: column;
-            justify-content: end;
             .boton-borrar{
                 padding: 0;
                 margin-left: 45vw;
@@ -40,7 +39,7 @@
                 height: auto;
                 background: none;
                 border: none;
-                color: gray;
+                color: rgb(75, 75, 75);
             }
             & >p{
                 font-family: "Neue-Helvetica", "Helvetica", "Arial", "sans-serif";
@@ -65,13 +64,15 @@
             }
             .descripcion-producto{
                 font-family:"Neue-Helvetica", "Helvetica", "Arial", "sans-serif" ;
-                font-size: 50%;
+                font-size: xx-small;
+                justify-content: center;
                 text-align:start;
                 width: 90%;
-                margin-top: 9.5vh;
                 margin-left: 3vw;
+                margin-top: auto;
                 margin-bottom: 1.5vh;
                 color: grey;
+                align-items: end;
             }
         }
     }
