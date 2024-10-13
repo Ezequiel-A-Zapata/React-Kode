@@ -1,0 +1,73 @@
+.contenedor-cesta {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    .limpiar-carrito{
+        width: 35vw;
+        padding: 1%;
+        margin-left: 3%;
+        font-size: xx-small;
+        height: auto;
+        background: none;
+        border: solid rgb(75, 75, 75) 1px;
+    }
+    .producto-cesta {
+        display: grid;
+        grid-template-columns: 50vw 50vw;
+        overflow: hidden;
+        width: 100vw;
+        height: auto;
+        border: solid black 1px;
+        box-shadow: -2px 2px 15px 1px rgb(132, 132, 132);
+
+        .imagen-producto {
+            grid-column: 1/2;
+            height: auto;
+            width: 50vw;
+        }
+
+        .info-producto-cesta {
+            grid-column: 2/3;
+            border-left: solid black 1px;
+            .boton-borrar{
+                padding: 0;
+                margin-left: 45vw;
+                margin-top: 1vh;
+                height: auto;
+                background: none;
+                border: none;
+            }
+            & >p{
+                font-family: "Neue-Helvetica", "Helvetica", "Arial", "sans-serif";
+                font-size: x-small;
+                margin-left: 3vw;
+                margin-top: 0;
+                padding: 0%;
+            }
+            .display-cantidad{
+                font-family:"Neue-Helvetica", "Helvetica", "Arial", "sans-serif" ;
+                margin-left: 3vw;
+                font-size: xx-small;
+                display: flex;
+                gap: 2vw;
+                & > button{
+                    padding: 0;
+                    margin: 0;
+                    height: auto;
+                    background: none;
+                    border: none;
+                }
+            }
+            .descripcion-producto{
+                font-family:"Neue-Helvetica", "Helvetica", "Arial", "sans-serif" ;
+                font-size: xx-small;
+                justify-content: center;
+                text-align:start;
+                width: 90%;
+                margin: 3vw;
+                color: grey;
+                margin-top: 6vh;
+            }
+        }
+    }
+}

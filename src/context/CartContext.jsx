@@ -11,14 +11,27 @@ export const CartProvider = ({children}) => {
 
     const [cantidad, setCantidad] = useState(0)
 
-    const handleSumar = (cantidad) => {
-        setCantidad(cantidad + 1)
+    const handleSumar = (item) => {
+        const nuevoCarrito = [...carrito];
+        const estaEnElcarrito = nuevoCarrito.find((producto) => producto.id === item.id);
+        estaEnElcarrito.cantidad += 1
+        setCarrito(nuevoCarrito)
     }
+    const handleRestar = (item) => {
+        const nuevoCarrito = [...carrito];
+        const estaEnElcarrito = nuevoCarrito.find((producto) => producto.id === item.id);
+        if(estaEnElcarrito.cantidad>1){
+            estaEnElcarrito.cantidad -= 1
+        }
+        setCarrito(nuevoCarrito)
+    }
+    const eliminarProducto = (item) => {
+        const nuevoCarrito = [...carrito];
+        const estaEnElcarrito = nuevoCarrito.filter((producto) => producto.id !== item.id);
+        setCarrito(estaEnElcarrito)
 
-    const handleRestar = (cantidad) => {
-        cantidad > 1 && setCantidad(cantidad - 1)
     }
-    const handleAgregar = (cantidad,item,carrito) => {
+    const handleAgregar = (item,carrito) => {
 
         const itemAgregado = { ...item, cantidad:1 }
         const nuevoCarrito = [...carrito];
@@ -32,9 +45,12 @@ export const CartProvider = ({children}) => {
         setCarrito(nuevoCarrito);
         setCantidad(0)
     }
+    const limpiarCarrito = () => {
+        setCarrito([])
+    }
     const carritoAcumulador = carrito.reduce((acc,prod) => acc + prod.cantidad,0);
     return(
-        <CartContext.Provider value={{carrito,cantidad,handleSumar,handleRestar,handleAgregar,carritoAcumulador}}>
+        <CartContext.Provider value={{carrito,cantidad,handleSumar,handleRestar,handleAgregar,eliminarProducto,carritoAcumulador,limpiarCarrito}}>
             {children}
         </CartContext.Provider>
     )

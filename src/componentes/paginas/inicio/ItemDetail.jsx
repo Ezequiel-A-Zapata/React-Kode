@@ -23,12 +23,7 @@ function ItemDetail(props) {
                         <p>{item.nombre.toUpperCase()}</p>
                         <p>${item.precio}</p>
                     </div>
-                    {/* <div className='display-cantidad'>
-                        <p>CANTIDAD: {cantidad}</p>
-                        <button className='boton-sumar-restar' onClick={()=>{handleSumar(cantidad)}}><i className="bi bi-plus-square-dotted"></i></button>
-                        <button className='boton-sumar-restar' onClick={()=>{handleRestar(cantidad)}}><i className="bi bi-dash-square-dotted"></i></button>
-                    </div> */}
-                    <button onClick={()=>{handleAgregar(cantidad,item,carrito)}} className='botonDetail-anadir'> AÑADIR</button>
+                    <button onClick={()=>{handleAgregar(item,carrito)}} className='botonDetail-anadir'> AÑADIR</button>
                     <div className='descripcion'>{item.descripcion}</div>
                 </section>
             </section>

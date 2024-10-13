@@ -4,4 +4,15 @@
     font-size: x-small;
     color: gray;
     margin-right: 2vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .acumulador-carrito{
+        position: absolute;
+        color: rgb(226, 185, 0);
+        top: -4px;
+        border-radius: 50%;
+        font-size: x-small;
+    }
 }
