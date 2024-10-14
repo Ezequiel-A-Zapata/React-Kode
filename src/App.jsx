@@ -26,7 +26,6 @@ function App() {
         <Route path='/Cesta' element={<Cesta />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer></Footer>
     </BrowserRouter>
     </CartProvider>
     </>

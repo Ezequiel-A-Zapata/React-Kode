@@ -27,9 +27,9 @@ function Cesta() {
                                         <h3 className='precio-producto'>${prod.precio * prod.cantidad}</h3>
                                         <div className='descripcion-producto'>{prod.descripcion.toUpperCase()}</div>
                                         <div className='display-cantidad'>
-                                            <button onClick={() => { handleSumar(prod) }}><i className="bi bi-plus"></i></button>
+                                            <button onClick={() => { handleSumar(prod) }}><i className="bi bi-plus" style={{color:"black"}}></i></button>
                                             <p>{prod.cantidad}</p>
-                                            <button onClick={() => { handleRestar(prod) }}><i className="bi bi-dash"></i></button>
+                                            <button onClick={() => { handleRestar(prod) }}><i className="bi bi-dash" style={{color:"black"}}></i></button>
                                         </div>
                                         
                                     </div>
