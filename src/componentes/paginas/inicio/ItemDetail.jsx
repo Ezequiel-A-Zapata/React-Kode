@@ -20,11 +20,11 @@ function ItemDetail(props) {
                 )) : <p>no hay imagenes</p>}
                 <section className='info-detail'>
                     <div>
-                        <p>{item.nombre.toUpperCase()}</p>
-                        <p>${item.precio}</p>
+                        <h2 className='nombre-producto'>{item.nombre.toUpperCase()}</h2>
+                        <h3 className='precio-producto'>${item.precio}</h3>
                     </div>
                     <button onClick={()=>{handleAgregar(item,carrito)}} className='botonDetail-anadir'> AÑADIR</button>
-                    <div className='descripcion'>{item.descripcion}</div>
+                    <div className='descripcion'>{item.descripcion.toUpperCase()}</div>
                 </section>
             </section>
         </>
