@@ -3,6 +3,7 @@ import Header2 from '../../header/Header2'
 import { CartContext } from '../../../context/CartContext'
 import "../../componentes-css/cesta.scss"
 import { Link } from 'react-router-dom'
+import Footer2 from '../../footer/Footer2.'
 
 function Cesta() {
 
