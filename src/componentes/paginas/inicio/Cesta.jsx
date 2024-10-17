@@ -43,6 +43,7 @@ function Cesta() {
                             </div>
                     </>}
             </section>
+            <Footer2 />
         </>
     )
 }

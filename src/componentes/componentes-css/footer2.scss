@@ -1,0 +1,13 @@
+.contenedor-footer2{
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 4vw;
+    &>a{
+        color: black;
+        font-family: "Neue-Helvetica", "Helvetica", "Arial", "sans-serif";
+        font-size: xx-small;
+    }
+
+}

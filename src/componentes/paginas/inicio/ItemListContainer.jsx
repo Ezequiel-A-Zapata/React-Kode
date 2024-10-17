@@ -6,6 +6,7 @@ import { Link, useParams } from 'react-router-dom';
 import "../../componentes-css/itemListContainer.scss"
 import Header2 from '../../header/Header2';
 import { CartContext } from '../../../context/CartContext';
+import Footer2 from '../../footer/Footer2.';
 
 
 function ItemListContainer() {
@@ -37,8 +38,9 @@ function ItemListContainer() {
 
 
     return (
+        <>
+        <Header2></Header2>
         <section className='container'>
-            <Header2></Header2>
             <section className='list-container'>
                 {productos ? productos.map((producto) => {
                     return (
@@ -62,6 +64,8 @@ function ItemListContainer() {
                 }
             </section>
         </section>
+        <Footer2 />
+        </>
     )
 }
 

@@ -3,6 +3,7 @@ import { db } from '../../firebase/config-fb'
 import { getDoc, doc } from "firebase/firestore"
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../../paginas/inicio/ItemDetail';
+import Footer2 from '../../footer/Footer2.';
 
 
 
@@ -24,6 +25,7 @@ function ItemDetailContainer() {
     return (
         <>
         {item && <ItemDetail item={item} />}
+        <Footer2 />
         </>
     )
 }
