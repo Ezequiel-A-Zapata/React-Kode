@@ -16,6 +16,10 @@
     background: transparent;
     border: none;
     cursor: pointer;
+    @include mobile-landscape {
+        margin-bottom: 5vh;
+        margin-left: 0;
+    }
 }
 .nav-bar{
     width: 100vw;
@@ -41,11 +45,13 @@
         height: 0;
         box-shadow: -7px 4px 20px 1px rgb(223, 223, 223);
         padding-top: 15%;
+        overflow: hidden;
         padding-left: 10%;
         margin-left: 10%;
-        // animation: desplegar 1s ease-in-out 10s;
-        // animation-fill-mode: forwards;
-        overflow: hidden;
+        @include mobile-landscape{
+            gap: 7dvh;
+            padding-top: 10%;
+        }
         &.dnone{
             display: none;
         }

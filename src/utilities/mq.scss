@@ -1,0 +1,48 @@
+// Desktop (1200px en adelante)
+@mixin desktop {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+// Notebook (1024px - 1199px)
+@mixin notebook {
+    @media screen and (min-width: 1024px) and (max-width: 1199px) {
+        @content;
+    }
+}
+
+// Tablet (768px - 1023px)
+@mixin tablet {
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
+// Mobile Portrait (480px - 767px)
+@mixin mobile-portrait {
+    @media screen and (min-width: 480px) and (max-width: 767px) and (orientation: portrait) {
+        @content;
+    }
+}
+
+// Mobile Landscape (480px - 767px)
+@mixin mobile-landscape {
+    @media screen and (min-width: 480px) and (max-width: 767px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+// Small Mobile Portrait (320px - 479px)
+@mixin s-mobile-portrait {
+    @media screen and (min-width: 320px) and (max-width: 479px) and (orientation: portrait) {
+        @content;
+    }
+}
+
+// Small Mobile Landscape (320px - 479px)
+@mixin s-mobile-landscape {
+    @media screen and (min-width: 320px) and (max-width: 479px) and (orientation: landscape) {
+        @content;
+    }
+}

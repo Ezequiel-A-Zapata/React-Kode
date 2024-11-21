@@ -2,7 +2,6 @@
 import './App.scss'
 import { BrowserRouter,Route,Routes } from 'react-router-dom'
 import Inicio from './componentes/paginas/inicio/Inicio'
-import Footer from './componentes/footer/Footer'
 import ItemListContainer from './componentes/paginas/inicio/ItemListContainer'
 import Cesta from './componentes/paginas/inicio/Cesta'
 import ItemDetailContainer from './componentes/paginas/inicio/ItemDetailContainer'
