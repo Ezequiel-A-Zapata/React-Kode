@@ -13,6 +13,13 @@
             width: 100vw;
             padding-top: 5vh;
         }
+        @include tablet{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100vw;
+            padding-top: 5vh;
+        }
         .producto{
             display: flex;
             flex-direction: column;
@@ -31,11 +38,21 @@
                     border: solid black 1px;
                     margin: 1vw;
                 }
+                @include tablet {
+                    width: 43%;
+                    padding: 2vw;
+                    box-shadow: none;
+                    border: solid black 1px;
+                    margin: 1vw;
+                }
             .producto-imagen{
                 width: 100vw;
                 height: auto;
                 mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
                 @include mobile-landscape{
+                    width: 40vw;
+                }
+                @include tablet{
                     width: 40vw;
                 }
             }
@@ -49,11 +66,18 @@
                 @include mobile-landscape{
                     margin-top: 15vh;
                 }
+                @include tablet {
+                    margin-top: 5vh;
+                }
                 p{
                     margin-left: 4vw;
                     margin-top:0 ;
                     padding-bottom: 0.5vh;
                     @include mobile-landscape{
+                        margin-left: 30vw;
+                        padding: 0;
+                    }
+                    @include tablet{
                         margin-left: 30vw;
                         padding: 0;
                     }
@@ -68,6 +92,10 @@
                         right: 28vw;
                         bottom: 0.8vh;
                     }
+                    @include tablet {
+                        right: 28vw;
+                        bottom: 0.8vh;
+                    }
                     i{
                         margin: 0;
                     }
@@ -77,6 +105,9 @@
                 position: absolute;
                 bottom: 9vh;
                 @include mobile-landscape{
+                    bottom: 20vh;
+                }
+                @include tablet {
                     bottom: 20vh;
                 }
             }

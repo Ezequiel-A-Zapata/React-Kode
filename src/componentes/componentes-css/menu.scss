@@ -20,6 +20,10 @@
         margin-bottom: 5vh;
         margin-left: 0;
     }
+    @include tablet{
+        margin-bottom: 5vh;
+        margin-left: -1vw;
+    }
 }
 .nav-bar{
     width: 100vw;

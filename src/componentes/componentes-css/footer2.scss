@@ -9,6 +9,11 @@
     border-top: 1px solid black;
     @include mobile-landscape{
         height: 15vh;
+        gap: 7vw;
+    }
+    @include tablet{
+        height: 15vh;
+        gap: 10vw;
     }
     &>a{
         padding: 0%;

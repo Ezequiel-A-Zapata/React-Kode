@@ -22,16 +22,21 @@
             &:active{
                 color: white;
             }
-            // @media (orientation: landscape){
-            //     color: red;
-            // }
         }
     }
 }
 .contenedor-widget{
     margin-left: 35%;
     margin-top: 5%;
-}
+    @include mobile-landscape{
+        margin-top: 4%;
+        margin-left: 37%;
+        }
+    @include tablet {
+        margin-top: 4%;
+        margin-left: 37%;
+        }
+    }
 }
 
 
