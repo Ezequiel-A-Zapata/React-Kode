@@ -56,6 +56,10 @@
             gap: 7dvh;
             padding-top: 10%;
         }
+        @include tablet{
+            gap: 7dvh;
+            padding-top: 10%; 
+        }
         &.dnone{
             display: none;
         }

@@ -14,10 +14,10 @@ body{
   position: relative;
   overflow-x: hidden;
   @include mobile-landscape{
-    overflow-x: hidden;
+    overflow-y: hidden;
   }
   @include tablet {
-    overflow-x: hidden;
+    overflow-y: hidden;
   }
 }
 .container{
