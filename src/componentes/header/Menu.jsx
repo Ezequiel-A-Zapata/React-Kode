@@ -60,7 +60,7 @@ useEffect (()=>{
     return (
         <>
             <button  onClick={toggleMenu} className='boton-menu'>
-            <i className="bi bi-list imagen-menu" style={{fontSize:"230%",color:"gray"}}></i>
+            <i className="bi bi-list imagen-menu" style={{fontSize:"230%",color:"rgb(206, 187, 137)"}}></i>
             </button>
             <nav className={`nav-bar${menu ? ' dshow' : ''}`}>
                 <button onClick={toggleMenu} className='boton-menu '>

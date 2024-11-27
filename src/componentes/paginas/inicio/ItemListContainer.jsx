@@ -54,7 +54,7 @@ function ItemListContainer() {
                                 <p>{producto.nombre.toUpperCase()}</p>
                                 <p>${producto.precio}
                                     <button>
-                                        <i className="bi bi-bookmark" style={{ fontSize: "110%", color: "gray" }}></i>
+                                        <i className="bi bi-bookmark" style={{ fontSize: "110%", color: "black" }}></i>
                                     </button>
                                 </p></div>
                             <Link className='link-detail' to={`/producto/${producto.id}`}><i className="bi bi-plus-square-fill" style={{ fontSize: "90%", color: "gray" }}></i></Link>
