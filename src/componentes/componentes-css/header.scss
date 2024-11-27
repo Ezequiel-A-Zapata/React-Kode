@@ -12,13 +12,13 @@
         .logo {
             display: flex;
             color: black;
-            font-family:"Bebas Neue", sans-serif;
-            font-size: 700%;
-            margin: 2% 0 0 0;
-            padding-left: 2%;
+            font-family: "Gravitas One", serif;
             font-weight: 400;
+            font-size: 300%;
+            margin: 5% 0 0 0;
+            padding-left: 7%;
             line-height: 1;
-            text-shadow: 1px 1px 2px black, 0 0 3px rgb(218, 194, 142), 0 0 5px rgb(206, 187, 137);
+            text-shadow: 1px 1px 2px black, 0 0 3px rgb(206, 187, 137), 0 0 5px rgb(0, 0, 28);
             &:active{
                 color: white;
             }
