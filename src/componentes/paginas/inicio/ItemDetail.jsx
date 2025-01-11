@@ -20,8 +20,8 @@ function ItemDetail(props) {
         console.log(posicion)
 
         // Rango de posición y escala
-        const posicionMaxima = 700; // Escala mínima
-        const posicionMinima = 590; // Escala máxima
+        const posicionMaxima = 830; // Escala mínima
+        const posicionMinima = 750; // Escala máxima
         const escalaMinima = 0.6;
         const escalaMaxima = 1;
 
