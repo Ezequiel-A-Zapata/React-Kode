@@ -15,7 +15,7 @@ function Cesta() {
         <>
             <Header2></Header2>
             <section className='contenedor-cesta'>
-                {carrito.length === 0 ? <p>la cesta esta vacia</p> :
+                {carrito.length === 0 ? <div className='cesta-vacia'><p >LA CESTA ESTA VACIA</p></div> :
                     <>
                         <button className='limpiar-carrito' onClick={limpiarCarrito}>LIMPIAR CESTA</button>
                         {carrito && carrito.map((prod) => {

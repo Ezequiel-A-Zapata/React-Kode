@@ -6,7 +6,7 @@ function ItemDetail(props) {
 
     const { item } = props;
 
-    const {carrito,cantidad,handleSumar,handleRestar,handleAgregar}=useContext(CartContext)
+    const {carrito,handleAgregar}=useContext(CartContext)
     console.log(carrito)
     const imagenes = item.imagenes;
 
