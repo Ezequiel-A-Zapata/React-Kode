@@ -4,8 +4,21 @@ html{
   padding: 0;
   width: 100%;
   max-width: 100%;  
-  
-  
+
+  ::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra */
+    height: 12px; /* Ancho del scrollbar horizontal */
+  }
+  ::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Color de fondo de la pista */
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #b8d5f3; /* Color del punto */
+    width: 10px; /* Tamaño del "punto" */
+    height: 10px; /* Tamaño del "punto" */
+    border: 2px solid #f0f0f0; /* Añade espacio alrededor del punto */
+  }
+
 }
 body{
   margin: 0; /* Elimina márgenes del body */
@@ -19,6 +32,29 @@ body{
   @include tablet {
     overflow-x: hidden;
   }
+
+  /* Estilos para la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra */
+  height: 12px; /* Altura de la barra (en scroll horizontal) */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Color de fondo de la pista */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #007bff; /* Color del "pulgar" (parte que se mueve) */
+  border-radius: 10px; /* Bordes redondeados del pulgar */
+  border: 3px solid #f0f0f0; /* Espaciado entre el pulgar y la pista */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0056b3; /* Color del pulgar al pasar el mouse */
+}
+
+
 }
 .container{
   padding: 0;

@@ -88,14 +88,8 @@ function ItemListContainer() {
                                         </button>
                                     </p>
                                 </div>
-                                <Link
-                                    className="link-detail"
-                                    to={`/producto/${producto.id}`}
-                                >
-                                    <i
-                                        className="bi bi-eye-fill"
-                                        style={{ fontSize: '90%', color: 'gray' }}
-                                    ></i>
+                                <Link className="link-detail" to={`/producto/${producto.id}`}>
+                                    <i className="bi bi-eye-fill" style={{ fontSize: '90%', color: 'gray' }}></i>
                                 </Link>
                             </div>
                         ))

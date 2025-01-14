@@ -7,6 +7,7 @@
     .contenedor-menulogo{
         display: flex;
         width: 55vw;
+        margin-top: 2%;
     .link-logo{
         text-decoration: none;
         .logo {
@@ -18,9 +19,14 @@
             margin: 5% 0 0 0;
             padding-left: 7%;
             line-height: 1;
-            text-shadow: 1px 1px 2px black, 0 0 3px rgb(206, 187, 137), 0 0 5px rgb(0, 0, 28);
+            text-shadow: 1px 1px 2px black, 0 0 3px rgb(206, 187, 137), 0 0 5px #b8d5f3;
             &:active{
                 color: white;
+            }
+            @include desktop{
+                padding-left: 0;
+                margin:0 ;
+                font-size: 400%;
             }
         }
     }
@@ -28,6 +34,10 @@
 .contenedor-widget{
     margin-left: 35%;
     margin-top: 5%;
+    @include desktop{
+        margin-left: 50%;
+        margin-top: 2%;
+    }
     @include mobile-landscape{
         margin-top: 4%;
         margin-left: 37%;

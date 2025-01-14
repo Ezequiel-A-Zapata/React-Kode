@@ -16,6 +16,10 @@
     background: transparent;
     border: none;
     cursor: pointer;
+    @include desktop{
+        margin: 0;
+        width: 8vw;
+    }
     @include mobile-landscape {
         margin-bottom: 5vh;
         margin-left: 0;
@@ -25,7 +29,7 @@
         margin-left: -1vw;
     }
 }
-.nav-bar{
+.nav-bar {
     width: 100vw;
     background-color: aliceblue;
     height: 100vh;
@@ -35,12 +39,42 @@
     left: -100vw; // Inicialmente oculto fuera de la pantalla a la izquierda
     transition: left 0.5s ease-in-out, opacity 0.5s ease-in; // Transición suave
     opacity: 0;
-    &.dshow{
-        transition: left 0.4s ease-in-out, opacity 0.4 ease-in;
+    overflow: hidden; // Asegúrate de que no sobresalga contenido durante la animación
+    @include desktop{
+        width: 40vw; // Reduce el ancho a 40vw
+    }
+    
+    &.dshow {
+        transition: left 0.4s ease-in-out, opacity 0.4s ease-in;
         opacity: 1;
         left: 0; // Mueve el `nav-bar` a la vista cuando el menú está abierto
-    }    
-    .lista{
+    }
+
+    // Esto es para evitar que la animación muestre un borde extraño en algunas resoluciones
+    &.dshow, &:not(.dshow) {
+        z-index: 10; // Asegura que el menú esté por encima de otros elementos mientras se despliega
+    }
+    .boton-menu2{
+        margin: 1% 0 0 0;
+        padding: 0;
+        width: 10vw;
+        height: 5vh;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        @include desktop{
+            margin: 3% 0 0 0
+        }
+        @include mobile-landscape {
+            margin-bottom: 5vh;
+            margin-left: 0;
+        }
+        @include tablet{
+            margin-bottom: 5vh;
+            margin-left: -1vw;
+        }
+    }
+    .lista {
         list-style-type: none;
         display: flex;
         flex-direction: column;
@@ -52,29 +86,35 @@
         overflow: hidden;
         padding-left: 10%;
         margin-left: 10%;
+        @include desktop{
+            margin-top: 0.7vh;
+        }
         @include mobile-landscape{
             gap: 7dvh;
             padding-top: 10%;
         }
         @include tablet{
             gap: 7dvh;
-            padding-top: 10%; 
+            padding-top: 10%;
         }
+
         &.dnone{
             display: none;
         }
+        
         &.animacion {
             animation: desplegar 0.8s ease-in-out 0.35s forwards;
         }
-        .categorias-link{
-            font-family:"Neue-Helvetica", "Helvetica", "Arial", "sans-serif";
-            font-size:x-small;
-            .link-menu{
+
+        .categorias-link {
+            font-family: "Neue-Helvetica", "Helvetica", "Arial", "sans-serif";
+            font-size: x-small;
+            .link-menu {
                 text-decoration: none;
-                color:rgb(75, 75, 75);
-                &.rojo{
+                color: rgb(75, 75, 75);
+                &.rojo {
                     font-weight: bold;
-                    text-decoration:underline;
+                    text-decoration: underline;
                 }
             }
         }

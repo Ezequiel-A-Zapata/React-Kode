@@ -3,6 +3,10 @@
     flex-direction: column;
     align-items: center;
     gap: 0.3vh;
+    @include desktop {
+        flex-direction: row;
+    }
+
     .imagen {
         object-fit: cover;
         max-width: 100%;
@@ -10,5 +14,15 @@
         height: 100vh;
         opacity: 90%;
         overflow: hidden;
+
+        /* Asegurarse de que la transición se aplique correctamente */
+        transition: scale 0.2s ease-in-out, ;
+
+        @include desktop {
+            &:hover {
+                scale: 98%;
+                opacity: 80%;
+            }
+        }
     }
 }

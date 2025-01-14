@@ -1,6 +1,6 @@
 
 .container-sticky{
-    height: 8vh;
+    height: 6vh;
     .header-2 {
         display: flex;
         width: 100vw;
@@ -13,6 +13,9 @@
         background-color: white;
         box-shadow: -2px 2px 15px 1px rgb(132, 132, 132);
         transition: background-color 0.3s ease-in-out; 
+        @include desktop{
+            height: 8.5vh;
+        }
         @include mobile-landscape  {
             height:11vh;
         }

@@ -60,11 +60,11 @@ useEffect (()=>{
     return (
         <>
             <button  onClick={toggleMenu} className='boton-menu'>
-            <i className="bi bi-list imagen-menu" style={{fontSize:"230%",color:"rgb(206, 187, 137)"}}></i>
+                <i className="bi bi-list imagen-menu" style={{fontSize:"230%",color:"rgb(206, 187, 137)"}}></i>
             </button>
             <nav className={`nav-bar${menu ? ' dshow' : ''}`}>
-                <button onClick={toggleMenu} className='boton-menu '>
-                <i className="bi bi-x-lg" style={{fontSize:"200%",color:"gray"}}  ></i>
+                <button onClick={toggleMenu} className='boton-menu2 '>
+                    <i className="bi bi-x-lg" style={{fontSize:"200%",color:"gray"}}  ></i>
                 </button>
                 <ul ref={lista} className='lista'>
                     {categorias ? categorias.map((categoria,index)=> {

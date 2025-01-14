@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState, useEffect } from 'react';
+import React, { useContext, useMemo, useState, useEffect } from 'react';
 import "../../componentes-css/itemDetail.scss";
 import Header2 from '../../header/Header2';
 import { CartContext } from '../../../context/CartContext';
@@ -8,73 +8,45 @@ function ItemDetail(props) {
     const { carrito, handleAgregar } = useContext(CartContext);
     const imagenes = item.imagenes;
 
-    const [infoEscala, setInfoEscala] = useState(0.6); // Escala inicial
-    const infoRef = useRef(null);
+    const [indexImagenes, setIndexImagenes] = useState(0);
+    console.log(indexImagenes)
 
-    // Verificar la posición y calcular la escala
-    const checkInfoPositions = () => {
-        if (!infoRef.current) return;
+    const urls = useMemo(() => Object.values(imagenes), [imagenes]);
 
-        // Obtener la posición del elemento respecto a la ventana
-        const posicion = infoRef.current.getBoundingClientRect().top;
-        console.log(posicion)
+    // usamos % para que nos devuelva el residuo de la division y asi asegurarnos que no nos de valores afuera de los indices
 
-        // Rango de posición y escala
-        const posicionMaxima = 830; // Escala mínima
-        const posicionMinima = 750; // Escala máxima
-        const escalaMinima = 0.6;
-        const escalaMaxima = 1;
+    const next = () => {
+        setIndexImagenes((prevIndex) => (prevIndex + 1) % urls.length);
+    }
 
-        // Calcular escala dentro del rango
-        if (posicion >= posicionMaxima) {
-            setInfoEscala(escalaMinima); // Escala mínima
-        } else if (posicion <= posicionMinima) {
-            setInfoEscala(escalaMaxima); // Escala máxima
-        } else {
-            // Calcular escala intermedia
-            const escala =
-                escalaMinima +
-                ((escalaMaxima - escalaMinima) * (posicionMaxima - posicion)) /
-                    (posicionMaxima - posicionMinima);
-            setInfoEscala(escala);
-        }
-    };
-
+    const back = () => {
+        setIndexImagenes((prevIndex) => (prevIndex - 1 + urls.length) % urls.length);
+    }
     useEffect(() => {
-        const handleScroll = () => {
-            checkInfoPositions();
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+        urls.forEach((url) => {
+            const img = new Image();
+            img.src = url;
+        });
+    }, [urls]);
 
     return (
         <>
             <Header2 />
             <section className="item-detail">
-                {imagenes ? (
-                    Object.entries(imagenes).map(([key, url]) => (
-                        <img
-                            key={key}
-                            className="imagen-detail"
-                            src={url}
-                            alt={`${item.nombre} ${key}`}
-                        />
-                    ))
-                ) : (
-                    <p>no hay imagenes</p>
-                )}
+                <section className='imagen-container'>
+                    {urls.length > 0 ? (
+                        <>
+                            <button className='boton-anterior' onClick={back} ><i className="bi bi-caret-left "  ></i></button>
+                            <button className='boton-siguiente' onClick={next} ><i className="bi bi-caret-right "></i></button>
+                            <img className='imagen-detail' src={urls[indexImagenes]} />
+                            
+                        </>
+                    ) : (
+                        <p>no hay imagenes</p>
+                    )}
+                </section>
                 <section
-                    ref={infoRef}
                     className="info-detail"
-                    style={{
-                        transform: `scale(${infoEscala})`,
-                        transition: 'transform 0.3s ease-in-out',
-                    }}
                 >
                     <div>
                         <h2 className="nombre-producto">{item.nombre.toUpperCase()}</h2>
