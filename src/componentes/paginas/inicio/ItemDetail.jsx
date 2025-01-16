@@ -52,6 +52,8 @@ function ItemDetail(props) {
                         <h2 className="nombre-producto">{item.nombre.toUpperCase()}</h2>
                         <h3 className="precio-producto">${item.precio}</h3>
                     </div>
+
+                    <div className="descripcion">{item.descripcion.toUpperCase()}</div>
                     <button
                         onClick={() => {
                             handleAgregar(item, carrito);
@@ -60,7 +62,6 @@ function ItemDetail(props) {
                     >
                         AÑADIR
                     </button>
-                    <div className="descripcion">{item.descripcion.toUpperCase()}</div>
                 </section>
             </section>
         </>

@@ -13,7 +13,7 @@ function Inicio() {
     console.log(imagenPosicion);
     const imagenesRef = useRef([]);
 
-     // Verificar la posición de cada imagen
+    // Verificar la posición de cada imagen
     const checkImagePositions = () => {
         // Crear un array para almacenar las posiciones
         const posiciones = imagenesRef.current.map((img) => {
@@ -23,19 +23,19 @@ function Inicio() {
         // Guardar las posiciones en el estado
         setImagenPosicion(posiciones);
 
-        const nuevasEscalas =  posiciones.map((pos)=>{
-            if(pos <= -650) {
-                const escala = pos/1000 + 1.65;
+        const nuevasEscalas = posiciones.map((pos) => {
+            if (pos <= -650) {
+                const escala = pos / 1000 + 1.65;
                 return escala;
             }
             return 1
         });
-    
+
         setImagenPosicion(posiciones);
         setImagenEscala(nuevasEscalas);
     };
 
-    
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -54,21 +54,21 @@ function Inicio() {
         <>
             <Header></Header>
             <div className='inicio'>
-                <img 
-                    ref={(el) => (imagenesRef.current[0] = el)} 
+                <img
+                    ref={(el) => (imagenesRef.current[0] = el)}
                     style={{ transform: `scale(${imagenEscala[0]})` }}
                     className='imagen' src={imagenfondo1} alt="" />
-                <img 
-                    ref={(el) => (imagenesRef.current[1] = el)} 
+                <img
+                    ref={(el) => (imagenesRef.current[1] = el)}
                     style={{ transform: `scale(${imagenEscala[1]})` }}
                     className='imagen' src={imagenfondo4} alt="" />
-                <img 
-                    ref={(el) => (imagenesRef.current[2] = el)} 
+                <img
+                    ref={(el) => (imagenesRef.current[2] = el)}
                     style={{ transform: `scale(${imagenEscala[2]})` }}
                     className='imagen' src={imagenfondo2} alt="" />
-                <img 
+                <img
                     ref={(el) => (imagenesRef.current[3] = el)}
-                    style={{ transform: `scale(${imagenEscala[3]})` }} 
+                    style={{ transform: `scale(${imagenEscala[3]})` }}
                     className='imagen' src={imagenfondo3} alt="" />
             </div>
             <Footer></Footer>

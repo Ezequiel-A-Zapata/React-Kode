@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react'
 import "../componentes-css/header2.scss"
 import Menu from '../header/Menu'
 import CestaWidget from "../header/CestaWidget"
+import { Link } from 'react-router-dom';
 function Header2() {
 
 
@@ -33,6 +34,7 @@ useEffect(() => {
     <div className='container-sticky'>
       <div className={`header-2 ${isTransparent ? 'transparente' : ''}`}>
         <Menu></Menu>
+        <Link to="/" className='link-inicio'>M</Link>
         <CestaWidget></CestaWidget>
       </div>
     </div>
