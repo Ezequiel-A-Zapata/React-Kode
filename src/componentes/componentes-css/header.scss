@@ -4,45 +4,88 @@
     max-width: 100%;
     position: fixed;
     z-index: 10;
+    @include tablet {
+        z-index: 20;
+    }
+    @include notebook {
+        z-index: 20;
+    }
+    @include desktop{
+        z-index: 20;
+    }
     .contenedor-menulogo{
         display: flex;
-        width: 55vw;
+        width: auto;
         margin-top: 2%;
+        margin-left: 2%;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        border-radius: 15px;
+
     .link-logo{
         text-decoration: none;
+        width: 55vw;
+        display: flex;
+        justify-content: end;
+        @include tablet{
+            width: 40vw;
+        }
+        @include notebook{
+            width: 35vw;
+        }
+        @include desktop{
+            width: 27vw;
+        }
         .logo {
             display: flex;
             color: black;
-            font-family: "Gravitas One", serif;
-            font-weight: 400;
+            font-family: "Syncopate", serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
             font-size: 300%;
-            margin: 5% 0 0 0;
+            letter-spacing: 0px;
+            margin: 3%;
             padding-left: 7%;
+            padding-right: 2%;
             line-height: 1;
-            text-shadow: 1px 1px 2px black, 0 0 3px rgb(206, 187, 137), 0 0 5px #b8d5f3;
-            &:active{
-                color: white;
+            @include tablet {
+                padding-left: 0;
+                margin:2% ;
+                font-size: 400%;
+            }
+            @include notebook{
+                padding-left: 0;
+                margin:0 ;
+                font-size: 500%;
             }
             @include desktop{
                 padding-left: 0;
                 margin:0 ;
-                font-size: 400%;
+                font-size: 500%;
             }
         }
     }
 }
 .contenedor-widget{
-    margin-left: 35%;
+    margin-left: 15%;
     margin-top: 5%;
+    @include tablet{
+        margin-left: 35%;
+        margin-top: 3vh;
+        width: 5w;
+    }
+    @include notebook{
+        margin-left: 40%;
+        margin-top: 7vh;
+        width: 5w;
+    }
     @include desktop{
         margin-left: 50%;
-        margin-top: 2%;
+        margin-top: 7vh;
+        width: 5w;
     }
     @include mobile-landscape{
-        margin-top: 4%;
-        margin-left: 37%;
-        }
-    @include tablet {
         margin-top: 4%;
         margin-left: 37%;
         }

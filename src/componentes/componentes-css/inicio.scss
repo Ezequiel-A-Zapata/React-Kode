@@ -3,10 +3,36 @@
     flex-direction: column;
     align-items: center;
     gap: 0.3vh;
+    position: relative;
+    @include tablet {
+        flex-direction: row;
+        height: 100vh;
+    }
+    @include notebook {
+        flex-direction: row;
+        height: 100vh;
+    }
     @include desktop {
         flex-direction: row;
+        height: 100vh;
     }
-
+    .contenedor-imagenes{
+        @include tablet{
+            display:flex;
+            position: fixed;
+            z-index: 1;
+        }
+        @include notebook{
+            display:flex;
+            position: fixed;
+            z-index: 1;
+        }
+        @include desktop{
+            display:flex;
+            position: fixed;
+            z-index: 1;
+        }
+    }
     .imagen {
         object-fit: cover;
         max-width: 100%;
@@ -14,13 +40,22 @@
         height: 100vh;
         opacity: 90%;
         overflow: hidden;
-
-        /* Asegurarse de que la transición se aplique correctamente */
-        transition: scale 0.2s ease-in-out, ;
-
+        transition: scale 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        @include tablet{
+            &:hover {
+                scale: 95%;
+                opacity: 80%;
+            }
+        }
+        @include notebook{
+            &:hover {
+                scale: 95%;
+                opacity: 80%;
+            }
+        }
         @include desktop {
             &:hover {
-                scale: 98%;
+                scale: 95%;
                 opacity: 80%;
             }
         }

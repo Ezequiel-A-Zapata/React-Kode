@@ -34,7 +34,7 @@ useEffect(() => {
     <div className='container-sticky'>
       <div className={`header-2 ${isTransparent ? 'transparente' : ''}`}>
         <Menu></Menu>
-        <Link to="/" className='link-inicio'>M</Link>
+        <Link to="/" className='link-inicio'>BENZO</Link>
         <CestaWidget></CestaWidget>
       </div>
     </div>

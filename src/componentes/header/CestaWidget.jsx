@@ -8,7 +8,7 @@ function CestaWidget() {
 const  {carritoAcumulador}=useContext(CartContext)      
     return (
         <>
-            <Link to="/Cesta" className='cesta-header'><i className="bi bi-bag" style={{fontSize:"180%",color:"rgb(100, 83, 24)"}}></i>
+            <Link to="/Cesta" className='cesta-header'><i className="bi bi-bag" style={{fontSize:"180%",color:"black"}}></i>
             {carritoAcumulador ? <p className='acumulador-carrito'>{carritoAcumulador}</p> : ""}
             
             </Link>

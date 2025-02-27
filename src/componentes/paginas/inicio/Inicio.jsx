@@ -8,9 +8,7 @@ import Header from '../../header/Header';
 import Footer from '../../footer/Footer';
 
 function Inicio() {
-    const [imagenPosicion, setImagenPosicion] = useState([]);
     const [imagenEscala, setImagenEscala] = useState([1, 1, 1, 1]); // Escala inicial de las imágenes (1 = 100%)
-    console.log(imagenPosicion);
     const imagenesRef = useRef([]);
 
     // Verificar la posición de cada imagen
@@ -20,8 +18,6 @@ function Inicio() {
             const rect = img.getBoundingClientRect(); // Obtiene las coordenadas de la imagen
             return rect.top; // La distancia desde la parte superior de la ventana
         });
-        // Guardar las posiciones en el estado
-        setImagenPosicion(posiciones);
 
         const nuevasEscalas = posiciones.map((pos) => {
             if (pos <= -650) {
@@ -30,8 +26,6 @@ function Inicio() {
             }
             return 1
         });
-
-        setImagenPosicion(posiciones);
         setImagenEscala(nuevasEscalas);
     };
 
@@ -54,6 +48,7 @@ function Inicio() {
         <>
             <Header></Header>
             <div className='inicio'>
+                <div className='contenedor-imagenes'>
                 <img
                     ref={(el) => (imagenesRef.current[0] = el)}
                     style={{ transform: `scale(${imagenEscala[0]})` }}
@@ -70,7 +65,9 @@ function Inicio() {
                     ref={(el) => (imagenesRef.current[3] = el)}
                     style={{ transform: `scale(${imagenEscala[3]})` }}
                     className='imagen' src={imagenfondo3} alt="" />
+                </div>
             </div>
+            
             <Footer></Footer>
         </>
     )

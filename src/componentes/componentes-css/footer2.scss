@@ -7,22 +7,36 @@
     justify-content: center;
     margin-top: 2vh;
     border-top: 1px solid rgb(143, 143, 143);
+    @include tablet{
+        height: 8vh;
+        gap: 7vw;
+    }
+    @include notebook {
+        height: 10vh;
+        gap: 7vw;
+    }
+    @include desktop {
+        height: 10vh;
+        gap: 7vw;
+    }
     @include mobile-landscape{
         height: 15vh;
         gap: 10vw;
     }
-    @include tablet{
-        height: 15vh;
-        gap: 10vw;
-    }
+
     &>a{
         padding: 0%;
         margin: 0;
         color: rgb(151, 112, 12);
-        font-family: "Neue-Helvetica", "Helvetica", "Arial", "sans-serif";
+        font-family: "Roboto",serif;
+        font-weight: 300;
+        letter-spacing: 1px;
         font-size: xx-small;
         text-decoration: none;
         text-shadow: 0 0 1px rgb(206, 187, 137), 0 0 1px #b8d5f3;
+        @include desktop{
+            font-size: small;
+        }
     }
 
 }

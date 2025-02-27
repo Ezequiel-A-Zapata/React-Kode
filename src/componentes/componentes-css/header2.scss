@@ -13,27 +13,31 @@
         background-color: white;
         box-shadow: -2px 2px 15px 1px rgb(132, 132, 132);
         transition: background-color 0.3s ease-in-out; 
-        @include desktop{
-            height: 8.5vh;
-        }
         @include mobile-landscape  {
             height:11vh;
         }
         @include tablet {
-            height: 11vh;
+            height: 7.5vh;
         }
+        @include notebook {
+            height: 8.5vh;
+        }
+        @include desktop{
+            height: 8.5vh;
+        }
+
         &.transparente{
             transition: box-shadow 0.3s ease-in-out; 
             box-shadow: none;
             background-color:transparent;
         }
         .link-inicio{
-            font-family: "Gravitas One", serif;
+            font-family: "Syncopate", serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
             text-decoration: none;
             color: black;
-            text-shadow: 1px 1px 2px black, 0 0 3px rgb(206, 187, 137), 0 0 5px #b8d5f3;
-            font-weight: 400;
-            font-size: 300%;
+            font-size: 250%;
         }
     }
 }

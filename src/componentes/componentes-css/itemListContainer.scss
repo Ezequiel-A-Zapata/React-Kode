@@ -7,14 +7,6 @@
         padding-top: 0vh;
         gap: 1vh;
         
-        @include desktop {
-            flex-direction: row;
-            gap: 3vw;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding-top: 4vh;
-        }
-
         @include mobile-landscape{
             flex-direction: row;
             flex-wrap: wrap;
@@ -31,6 +23,23 @@
             width: 100vw;
             padding-top: 5vh;
         }
+        @include notebook {
+            flex-direction: row;
+            gap: 3vw;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-top: 4vh;
+        }
+        
+        @include desktop {
+            flex-direction: row;
+            gap: 3vw;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-top: 4vh;
+        }
+
+
         .producto{
             display: flex;
             flex-direction: column;
@@ -38,49 +47,55 @@
                 margin:0;
                 margin-bottom: 4vh;
                 position: relative;
-                background-color: rgb(243, 240, 240);
+                background-color: white;
                 height: auto;
                 padding: 0%;
                 box-shadow: 0px 10px 20px 1px rgb(208, 208, 208);
-                @include desktop{
-                    width: 30vw;
-                }
+                border-radius: 20px;
                 @include mobile-landscape{
                     width: 44vw;
-                    box-shadow: none;
-                    border: solid black 1px;
                     margin: 1vw;
                 }
                 @include tablet {
                     width: 44vw;
-                    box-shadow: none;
-                    border: solid black 1px;
                     margin: 1vw;
                 }
+                @include notebook{
+                    width: 30vw;
+                }
+                
+                @include desktop{
+                    width: 30vw;
+                }
+
+
             .producto-imagen{
                 width: 100vw;
                 height: auto;
                 mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
-                @include desktop{
-                    width: 30vw;
-                }
+                border-radius: 20px;
                 @include mobile-landscape{
                     width: 44vw;
                 }
                 @include tablet{
                     width: 44vw;
                 }
+                @include notebook {
+                    width: 30vw;
+                }
+                @include desktop{
+                    width: 30vw;
+                }
             }
             .nombre-precio{
-                font-family: "Neue-Helvetica", "Helvetica", "Arial", "sans-serif";
-                color: gray;
+                font-family: "Roboto", serif;
+                font-weight: 300;
+                letter-spacing: 1px;
+                color: black;
                 font-size: x-small;
                 width: 100vw;
                 margin: 0;
-                position: relative;               
-                @include desktop{
-                    width: 35vw;
-                }
+                position: relative;
                 @include mobile-landscape{
                     margin-top: 6vh;
                     font-size: xx-small;
@@ -89,6 +104,15 @@
                     margin-top: 5vh;
                     font-size: xx-small;
                 }
+                @include notebook {
+                    width: 35vw;
+                    font-size: 70%;
+                }               
+                @include desktop{
+                    width: 35vw;
+                    font-size: 70%;
+                }
+
                 p{
                     margin-left: 4vw;
                     margin-top:0 ;
@@ -114,8 +138,15 @@
                     }
                     @include tablet {
                         right: 30vw;
-                        bottom: 5vh;
+                        bottom: 2vh;
                     }
+                    @include notebook{
+                        bottom: 2vh;
+                    }
+                    @include desktop{
+                        bottom: 4vh;
+                    }
+
                     i{
                         margin: 0;
                     }
@@ -124,12 +155,19 @@
             .link-detail{
                 position: absolute;
                 bottom: 9vh;
+                @include tablet {
+                    bottom: 7vh;
+                }
+                @include notebook {
+                    bottom: 10vh;
+                }
+                @include desktop{
+                    bottom: 10vh;
+                }
                 @include mobile-landscape{
                     bottom: 16vh;
                 }
-                @include tablet {
-                    bottom: 16vh;
-                }
+
             }
         }
     

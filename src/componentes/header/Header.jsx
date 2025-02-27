@@ -14,7 +14,7 @@ function Header() {
         <section className='header'>
             <div className='contenedor-menulogo'>
             <Menu></Menu>
-            <Link className='link-logo' to="/"><h1 className='logo'>Moski</h1></Link>
+            <Link className='link-logo' to="/"><h1 className='logo'>BENZO</h1></Link>
             </div>
             <div className='contenedor-widget'>
             <CestaWidget></CestaWidget>

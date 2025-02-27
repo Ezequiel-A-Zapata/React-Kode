@@ -4,6 +4,18 @@
     width: 100vw;
     height: auto;
     overflow: hidden;
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2vh;
+        
+    }
+    @include notebook {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2vh;
+        
+    }
     @include desktop{
         display: flex;
         justify-content: space-between;
@@ -12,6 +24,15 @@
     }
     .imagen-container{
         position: relative;
+        margin-bottom: 4vh;
+        @include tablet {
+            display: flex;
+            margin-left: 8vw;
+        }
+        @include notebook {
+            display: flex;
+            margin-left: 18vw;
+        }
         @include desktop{
             display: flex;
             margin-left: 18vw;
@@ -30,8 +51,14 @@
             justify-content: center;
             align-items: center;
             color: rgb(151, 112, 12);
+            @include tablet {
+                left: -2vh;
+            }
+            @include notebook {
+                left: -2vh;
+            }
             @include desktop{
-                left: 0%;
+                left: -8vh;
             }
         }
         .boton-siguiente{
@@ -48,13 +75,29 @@
             justify-content: center;
             align-items: center;
             color: rgb(151, 112, 12);
+            @include tablet {
+                right: -2vh;
+            }
+            @include notebook {
+                right: -2vh;
+            }
             @include desktop{
-                right: 0%;
+                right: -8vh;
             }
         }
     .imagen-detail{
         width: 100%;
         height: auto;
+        box-shadow: 0px 10px 20px 1px rgb(208, 208, 208);
+        border-radius: 20px;
+        @include tablet {
+            height: 65vh;
+            width: auto;
+        }
+        @include notebook {
+            height: 80vh;
+            width: auto;
+        }
         @include desktop{
             height: 110vh;
             width: auto;
@@ -65,29 +108,63 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-family: "Neue-Helvetica", "Helvetica", "Arial", "sans-serif";
+        font-family: "Roboto",serif;
+        font-weight: 300;
         font-size: 70%;
         width: 100%;
         height: 30vh;
         border: solid rgb(100, 83, 24) 1px;
         background-color: rgb(238, 238, 238);
+        box-shadow: 0px 10px 20px 1px rgb(208, 208, 208);
+        @include tablet {
+            width: 35vw;
+            margin-right: 2vw;
+            height: 40vh;
+            align-items: start;
+            font-size: small;
+            margin-left: 2vw;
+        }
+        border-radius: 20px;
+        @include notebook {
+            width: 35vw;
+            margin-right: 3vw;
+            height: 60vh;
+            align-items: start;
+            font-size: small;
+        }
         @include desktop {
             width: 35vw;
             margin-right: 3vw;
             height: 70vh;
             align-items: start;
+            font-size: small;
         }
 
         .nombre-producto{
-            font-size: x-small;    
+            font-size: x-small;
+            font-weight: 300;    
             color: rgb(73, 73, 73);
             width: 100%;
             margin-left: 5%;
             margin-top: 2vh;
+            letter-spacing: 1px;
+            @include tablet {
+                width: 100%;
+                margin-left: 3vw;
+                margin-top: 2vh;
+                font-size: x-small;
+            }
+            @include notebook {
+                width: 100%;
+                margin-left: 3vw;
+                margin-top: 2vh;
+                font-size: small;
+            }
             @include desktop {
                 width: 100%;
                 margin-left: 3vw;
                 margin-top: 4vh;
+                font-size: small;
             }
         }
         .precio-producto{
@@ -96,9 +173,22 @@
             width: 100vw;
             margin-left: 5%;
             margin-top: 1vh;
+            font-weight: 300;
+            letter-spacing: 1px;
+            @include tablet {
+                width: 20vw;
+                margin-left: 3vw;
+                font-size: x-small;
+            }
+            @include notebook {
+                width: 20vw;
+                margin-left: 3vw;
+                font-size: small;
+            }
             @include desktop {
                 width: 20vw;
                 margin-left: 3vw;
+                font-size: small;
             }
         }
 
@@ -110,25 +200,65 @@
             max-width: 90%;
             margin-top: 3vh;
             margin-left: 0;
-            @include desktop{
-                margin-top: 8vh;
+            @include tablet {
+                margin-top: 5vh;
                 max-width: 80%;
                 margin-left: 3vw;
+                font-size: xx-small;
+            }
+            @include notebook {
+                margin-top: 5vh;
+                max-width: 80%;
+                margin-left: 3vw;
+                font-size: x-small;
+            }
+            @include desktop{
+                margin-top: 10vh;
+                max-width: 80%;
+                margin-left: 3vw;
+                font-size: x-small;
             }
             
         }
         .botonDetail-anadir{
             margin-top: 2vh;
+            font-family: "Roboto",serif;
+            font-weight: 300;
+            letter-spacing: 1px;
             font-size: 80%;
             color: black;
             background-color: white;
-            border: solid rgb(100, 83, 24) 1px;
+            border: solid black 1px;
             padding-top: 2%;
             padding-bottom: 2%;
             width: 80%;
+            border-radius: 10px;
+            @include tablet {
+                margin-left: 3vw;
+                margin-top: 5vh;
+                font-size: smaller;
+                &:hover{
+                    background-color: black;
+                    color: white;
+                }
+            }
+            @include notebook {
+                margin-left: 3vw;
+                margin-top: 17vh;
+                font-size: smaller;
+                &:hover{
+                    background-color: black;
+                    color: white;
+                }
+            }
             @include desktop {
                 margin-left: 3vw;
-                margin-top: 22vh;
+                margin-top: 18vh;
+                font-size: smaller;
+                &:hover{
+                    background-color: black;
+                    color: white;
+                }
             }
             
         }

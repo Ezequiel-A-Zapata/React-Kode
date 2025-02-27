@@ -16,22 +16,29 @@
     background: transparent;
     border: none;
     cursor: pointer;
+    @include tablet {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 1vw;
+        width: 5vw;
+    }
+    @include notebook {
+        margin: 0;
+        width: 5vw;
+    }
     @include desktop{
         margin: 0;
-        width: 8vw;
+        width: 5vw;
     }
     @include mobile-landscape {
         margin-bottom: 5vh;
         margin-left: 0;
     }
-    @include tablet{
-        margin-bottom: 5vh;
-        margin-left: -1vw;
-    }
+
 }
 .nav-bar {
     width: 100vw;
-    background-color: aliceblue;
+    background-color: white;
     height: 100vh;
     z-index: 4;
     position: fixed;
@@ -40,6 +47,12 @@
     transition: left 0.5s ease-in-out, opacity 0.5s ease-in; // Transición suave
     opacity: 0;
     overflow: hidden; // Asegúrate de que no sobresalga contenido durante la animación
+    @include tablet {
+        width: 60vw; // Reduce el ancho a 40vw
+    }
+    @include notebook {
+        width: 40vw; // Reduce el ancho a 40vw
+    }
     @include desktop{
         width: 40vw; // Reduce el ancho a 40vw
     }
@@ -62,16 +75,18 @@
         background: transparent;
         border: none;
         cursor: pointer;
+        @include tablet {
+            margin: 3% 0 0 0
+        }
+        @include notebook {
+            margin: 3% 0 0 0
+        }
         @include desktop{
             margin: 3% 0 0 0
         }
         @include mobile-landscape {
             margin-bottom: 5vh;
             margin-left: 0;
-        }
-        @include tablet{
-            margin-bottom: 5vh;
-            margin-left: -1vw;
         }
     }
     .lista {
@@ -86,14 +101,22 @@
         overflow: hidden;
         padding-left: 10%;
         margin-left: 10%;
+        @include tablet {
+            margin-top: 2vh;
+            gap: 8dvh;
+            padding-top: 20%;
+        }
+        @include notebook {
+            margin-top: 2vh;
+            gap: 8dvh;
+            padding-top: 20%;
+        }
         @include desktop{
-            margin-top: 0.7vh;
+            margin-top: 2vh;
+            gap: 8dvh;
+            padding-top: 20%;
         }
         @include mobile-landscape{
-            gap: 7dvh;
-            padding-top: 10%;
-        }
-        @include tablet{
             gap: 7dvh;
             padding-top: 10%;
         }
@@ -107,8 +130,19 @@
         }
 
         .categorias-link {
-            font-family: "Neue-Helvetica", "Helvetica", "Arial", "sans-serif";
+            font-family: "Roboto", serif;
+            font-weight: 300;
+            letter-spacing: 1px;
             font-size: x-small;
+            @include tablet {
+                font-size: smaller;
+            }
+            @include notebook {
+                font-size: smaller;
+            }
+            @include desktop{
+                font-size: smaller;
+            }
             .link-menu {
                 text-decoration: none;
                 color: rgb(75, 75, 75);

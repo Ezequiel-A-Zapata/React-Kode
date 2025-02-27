@@ -1,5 +1,6 @@
 .cesta-header{
-    font-family: "Neue-Helvetica", "Helvetica", "Arial", "sans-serif";
+    font-family: "Roboto",serif;
+    font-weight: 300;
     text-decoration: none;
     font-size: x-small;
     color: gray;
@@ -8,17 +9,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: white;
+    padding: 1vw;
+    border-radius: 5px;
     @include desktop{
         font-size: small;
+        background-color: white;
+        padding: 1vh;
+        border-radius: 10px;
         }
     .acumulador-carrito{
         position: absolute;
         color: rgb(100, 83, 24);
         top: -3px;
-        border-radius: 50%;
+
         font-size: x-small;
+        @include notebook{
+            font-size: 90%;
+            top: 1.1vh;
+        }
         @include desktop{
             font-size: 90%;
+            top: 0.6vh;
         }
     }
 }

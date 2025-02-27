@@ -5,41 +5,100 @@
     position: relative;
     min-height: 90vh; 
     flex-grow: 1;
+    justify-content: space-between;
+
     .cesta-vacia{
         font-size: x-small;
         color: rgb(75, 75, 75);
-        font-family: "Neue-Helvetica", "Helvetica", "Arial", "sans-serif";
+        font-family: "Roboto",serif;
+        font-weight: 300;
         width: 100vw;
         height: 75vh;
         display: flex;
         justify-content: center;
         align-items: center;
+        letter-spacing: 1px;
+        @include tablet {
+            font-size: smaller;
+        }
+        @include notebook {
+            font-size: smaller;
+        }
+        @include desktop{
+            font-size: smaller;
+        }
     }
     .limpiar-carrito {
         width: 35vw;
         padding: 1%;
         margin-left: 3%;
         font-size: xx-small;
+        font-family: "Roboto",serif;
+        font-weight: 300;
         height: auto;
         background: none;
         color: rgb(75, 75, 75);
         border: solid rgb(75, 75, 75) 1px;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        @include tablet {
+            font-size: x-small;
+            padding: 1.4vh;
+            margin-top: 3vh;
+        }
+        @include notebook {
+            font-size: x-small;
+            padding: 1.4vh;
+            margin-top: 3vh;
+        }
+        @include desktop{
+            font-size: x-small;
+            padding: 1.4vh;
+            margin-top: 3vh;
+        }
     }
 
     .producto-cesta {
         display: grid;
         grid-template-columns: 50vw 50vw;
         overflow: hidden;
-
         width: 100vw;
         height: auto;
-        border: solid black 1px;
         box-shadow: -2px 2px 15px 1px rgb(132, 132, 132);
+        border-radius: 15px;
+        border: none;
+        @include tablet {
+            grid-template-columns: 30vw 60vw;
+            width: 90vw;
+            margin-left: 3vw;
+            margin-top: 4vh;
+        }
+        @include notebook {
+            grid-template-columns: 20vw 60vw;
+            width: 80vw;
+            margin-left: 3vw;
+            margin-top: 4vh;
+        }
+        @include desktop{
+            grid-template-columns: 15vw 50vw;
+            width: 70vw;
+            margin-left: 3vw;
+            margin-top: 4vh;
+        }
 
         .imagen-producto {
             grid-column: 1/2;
             height: auto;
             width: 50vw;
+            @include tablet{
+                width: 30vw;
+            }
+            @include notebook {
+                width: 20vw;
+            }
+            @include desktop{
+                width: 15vw;
+            }
         }
 
         .info-producto-cesta {
@@ -56,28 +115,71 @@
                 background: none;
                 border: none;
                 color: rgb(75, 75, 75);
+                @include tablet {
+                    margin-left: 52.5vw;
+                    margin-top: 2vh;
+                }
+                @include notebook {
+                    margin-left: 52.5vw;
+                    margin-top: 2vh;
+                }
+                @include desktop{
+                    margin-left: 52.5vw;
+                    margin-top: 2vh;
+                }
             }
 
             &>h2 {
-                font-family: "Neue-Helvetica", "Helvetica", "Arial", "sans-serif";
+                font-family: "Roboto", serif;
+                font-weight: 300;
                 font-size: xx-small;
-                color: rgb(75, 75, 75);
+                color: black;
                 margin-left: 3vw;
                 margin-top: 0;
                 padding: 0%;
+                @include tablet {
+                    margin-left: 2vw;
+                    font-size:smaller;
+                    
+                }
+                @include notebook {
+                    margin-left: 2vw;
+                    font-size:smaller;
+                    
+                }
+                @include desktop{
+                    margin-left: 2vw;
+                    font-size:smaller;
+                    
+                }
+                
             }
 
             &>h3 {
-                font-family: "Neue-Helvetica", "Helvetica", "Arial", "sans-serif";
+                font-family: "Roboto", serif;
+                font-weight: 300;
                 font-size: xx-small;
                 color: rgb(75, 75, 75);
                 margin-left: 3vw;
                 margin-top: 0.5vh;
                 padding: 0%;
+                @include tablet {
+                    margin-left: 2vw;
+                    font-size: small;
+                }
+                @include notebook {
+                    margin-left: 2vw;
+                    font-size: small;
+                }
+                @include desktop{
+                    margin-left: 2vw;
+                    font-size: small;
+                }
             }
 
             .descripcion-producto {
-                font-family: "Neue-Helvetica", "Helvetica", "Arial", "sans-serif";
+                font-family: "Roboto", serif;
+                font-weight: 300;
                 font-size: 50%;
                 justify-content: center;
                 text-align: start;
@@ -87,6 +189,18 @@
                 margin-bottom: 1.5vh;
                 color: grey;
                 align-items: end;
+                @include tablet {
+                    font-size: x-small;
+                    margin-left: 2vw;
+                }
+                @include notebook {
+                    font-size: x-small;
+                    margin-left: 2vw;
+                }
+                @include desktop{
+                    font-size: x-small;
+                    margin-left: 2vw;
+                }
             }
 
             .display-cantidad {
@@ -99,6 +213,31 @@
                 margin-bottom: 1vh;
                 grid-template-columns: 6vw 6vw 6vw;
                 border: solid black 1px;
+                border-radius: 5px;
+                @include tablet {
+                    margin-left: 38vw;
+                    height: 3vh;
+                    width: 15vw;
+                    grid-template-columns: 5vw 5vw 5vw;
+                    margin-bottom: 2vh;
+                    font-size: x-small;
+                }
+                @include notebook {
+                    margin-left: 38vw;
+                    height: 3.5vh;
+                    width: 15vw;
+                    grid-template-columns: 5vw 5vw 5vw;
+                    margin-bottom: 2vh;
+                    font-size: x-small;
+                }
+                @include desktop{
+                    margin-left: 38vw;
+                    height: 3.5vh;
+                    width: 15vw;
+                    grid-template-columns: 5vw 5vw 5vw;
+                    margin-bottom: 2vh;
+                    font-size: x-small;
+                }
 
                 &>p {
                     padding: 0%;
@@ -117,6 +256,15 @@
                     background: none;
                     width: 6vw;
                     border: none;
+                    @include tablet {
+                        width: 5vw;
+                    }
+                    @include notebook {
+                        width: 5vw;
+                    }
+                    @include desktop{
+                        width: 5vw;
+                    }
                 }
             }
 
@@ -131,28 +279,76 @@
         position: sticky;
         flex-direction: column;
         bottom: 0;
-        font-family: "Neue-Helvetica", "Helvetica", "Arial", "sans-serif";
-        border-top: solid black 1px;
-        border-bottom: solid black 1px;
-        &>p{
-            padding: 0;
-            margin: 0;
+        font-family: "Roboto", serif;
+        border: solid black 1px;
+        background-color: white;
+        border-radius: 10px;
+        @include tablet{
+            height: 8vh;
+            width: 90vw;
+            margin-left: 5vw;
         }
+        @include notebook {
+            height: 12vh;
+            width: 90vw;
+            margin-left: 5vw;
+        }
+        @include desktop{
+            height: 12vh;
+            width: 90vw;
+            margin-left: 5vw;
+        }
+
         .cuenta{
             display: flex;
             justify-content: space-between;
             width: 100%;
+            @include tablet {
+                width: 95%; 
+            }
+            @include notebook {
+                width: 95%; 
+            }
+            @include desktop{
+                width: 95%;
+            }
             .total{
                 font-size: x-small;
-                font-weight: 600;
+                font-weight: 300;
                 margin-left: 3vw;
+                letter-spacing: 1px;
+                @include tablet {
+                    font-size: smaller;
+                    margin-top: 2vw;
+                }
+                @include notebook {
+                    font-size: smaller;
+                    margin-top: 2vw;
+                }
+                @include desktop{
+                    font-size: smaller;
+                    margin-top: 2vw;
+                }
             }
             .precio-total{
                 display: flex;
                 justify-content: end;
                 font-size: x-small;
-                font-weight: 600;
+                font-weight: 300;
                 margin-right: 3vw;
+                letter-spacing: 1px;
+                @include tablet {
+                    font-size: smaller;
+                    margin-top: 2vw;
+                }
+                @include notebook {
+                    font-size: smaller;
+                    margin-top: 2vw;
+                }
+                @include desktop{
+                    font-size: smaller;
+                    margin-top: 2vw;
+                }
             }
         }
         .continuar{
@@ -163,9 +359,26 @@
             width: 100%;
             display: flex;
             height: 3vh;
-            margin-top: 1vh;
             justify-content: center;
             align-items: center;
+            font-weight: 300;
+            letter-spacing: 1px;
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+            @include notebook {
+                font-size: smaller;
+                height: 3vh;
+                padding-bottom: 2vh;
+                width: 100%;
+                
+            }
+            @include desktop{
+                font-size: smaller;
+                height: 3vh;
+                padding-bottom: 2vh;
+                width: 100%;
+                
+            }
         }
     }
 }
