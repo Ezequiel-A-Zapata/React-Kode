@@ -6,6 +6,9 @@
     background-color: white;
     position: relative;
     z-index: 10;
+    @include mobile-landscape {
+        height: 80vh;
+    }
     @include tablet {
         height: 80vh;
     }

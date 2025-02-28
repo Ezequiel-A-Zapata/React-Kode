@@ -3,7 +3,10 @@
     width: 98%;
     max-width: 100%;
     position: fixed;
-    z-index: 10;
+    z-index: 20;
+    @include mobile-landscape {
+        z-index: 20;
+    }
     @include tablet {
         z-index: 20;
     }
@@ -28,6 +31,9 @@
         width: 55vw;
         display: flex;
         justify-content: end;
+        @include mobile-landscape {
+            width: 35vw;
+        }
         @include tablet{
             width: 40vw;
         }
@@ -43,12 +49,17 @@
             font-family: "Syncopate", serif;
             font-optical-sizing: auto;
             font-weight: 500;
-            font-size: 300%;
+            font-size: 250%;
             letter-spacing: 0px;
             margin: 3%;
             padding-left: 7%;
             padding-right: 2%;
             line-height: 1;
+            @include mobile-landscape{
+                padding-left:0;
+                margin:2% ;
+                font-size: 300%;
+            }
             @include tablet {
                 padding-left: 0;
                 margin:2% ;
@@ -70,6 +81,11 @@
 .contenedor-widget{
     margin-left: 15%;
     margin-top: 5%;
+    @include mobile-landscape {
+        margin-left: 35%;
+        margin-top: 6vh;
+        width: 5w;
+    }
     @include tablet{
         margin-left: 35%;
         margin-top: 3vh;
@@ -85,10 +101,6 @@
         margin-top: 7vh;
         width: 5w;
     }
-    @include mobile-landscape{
-        margin-top: 4%;
-        margin-left: 37%;
-        }
     }
 }
 

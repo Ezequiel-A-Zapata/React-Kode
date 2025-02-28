@@ -21,9 +21,13 @@
     .acumulador-carrito{
         position: absolute;
         color: rgb(100, 83, 24);
-        top: -3px;
+        top: 0.1vh;
 
         font-size: x-small;
+        @include mobile-landscape {
+            font-size: 90%;
+            top: 1.3vh;
+        }
         @include notebook{
             font-size: 90%;
             top: 1.1vh;

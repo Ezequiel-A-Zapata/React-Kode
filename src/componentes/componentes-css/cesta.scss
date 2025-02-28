@@ -18,6 +18,9 @@
         justify-content: center;
         align-items: center;
         letter-spacing: 1px;
+        @include mobile-landscape{
+            font-size: x-small;
+        }
         @include tablet {
             font-size: smaller;
         }
@@ -41,6 +44,11 @@
         border: solid rgb(75, 75, 75) 1px;
         letter-spacing: 1px;
         border-radius: 5px;
+        @include mobile-landscape {
+            font-size: xx-small;
+            padding: 1.4vh;
+            margin-top: 10vh;
+        }
         @include tablet {
             font-size: x-small;
             padding: 1.4vh;
@@ -67,6 +75,12 @@
         box-shadow: -2px 2px 15px 1px rgb(132, 132, 132);
         border-radius: 15px;
         border: none;
+        @include mobile-landscape {
+            grid-template-columns: 20vw 70vw;
+            width: 90vw;
+            margin-left: 3vw;
+            margin-top: 4vh;
+        }
         @include tablet {
             grid-template-columns: 30vw 60vw;
             width: 90vw;
@@ -90,6 +104,9 @@
             grid-column: 1/2;
             height: auto;
             width: 50vw;
+            @include mobile-landscape{
+                width: 20vw;
+            }
             @include tablet{
                 width: 30vw;
             }
@@ -115,6 +132,10 @@
                 background: none;
                 border: none;
                 color: rgb(75, 75, 75);
+                @include mobile-landscape {
+                    margin-left: 61vw;
+                    margin-top: 2vh;
+                }
                 @include tablet {
                     margin-left: 52.5vw;
                     margin-top: 2vh;
@@ -137,6 +158,11 @@
                 margin-left: 3vw;
                 margin-top: 0;
                 padding: 0%;
+                @include mobile-landscape {
+                    margin-left: 2vw;
+                    font-size:x-small;
+                    
+                }
                 @include tablet {
                     margin-left: 2vw;
                     font-size:smaller;
@@ -163,6 +189,10 @@
                 margin-left: 3vw;
                 margin-top: 0.5vh;
                 padding: 0%;
+                @include mobile-landscape{
+                    margin-left: 2vw;
+                    font-size: x-small;
+                }
                 @include tablet {
                     margin-left: 2vw;
                     font-size: small;
@@ -189,6 +219,10 @@
                 margin-bottom: 1.5vh;
                 color: grey;
                 align-items: end;
+                @include mobile-landscape {
+                    font-size: xx-small;
+                    margin-left: 2vw;
+                }
                 @include tablet {
                     font-size: x-small;
                     margin-left: 2vw;
@@ -214,6 +248,14 @@
                 grid-template-columns: 6vw 6vw 6vw;
                 border: solid black 1px;
                 border-radius: 5px;
+                @include mobile-landscape{
+                    margin-left: 50vw;
+                    height: 5vh;
+                    width: 15vw;
+                    grid-template-columns: 5vw 5vw 5vw;
+                    margin-bottom: 4vh;
+                    font-size: x-small;
+                }
                 @include tablet {
                     margin-left: 38vw;
                     height: 3vh;
@@ -256,6 +298,9 @@
                     background: none;
                     width: 6vw;
                     border: none;
+                    @include mobile-landscape{
+                        width: 5vw;
+                    }
                     @include tablet {
                         width: 5vw;
                     }
@@ -283,6 +328,11 @@
         border: solid black 1px;
         background-color: white;
         border-radius: 10px;
+        @include mobile-landscape{
+            height: 17vh;
+            width: 90vw;
+            margin-left: 5vw;
+        }
         @include tablet{
             height: 8vh;
             width: 90vw;
@@ -303,6 +353,9 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
+            @include mobile-landscape{
+                width: 95%; 
+            }
             @include tablet {
                 width: 95%; 
             }
@@ -317,6 +370,10 @@
                 font-weight: 300;
                 margin-left: 3vw;
                 letter-spacing: 1px;
+                @include mobile-landscape{
+                    font-size: x-small;
+                    margin-top: 4vw;
+                }
                 @include tablet {
                     font-size: smaller;
                     margin-top: 2vw;
@@ -337,6 +394,10 @@
                 font-weight: 300;
                 margin-right: 3vw;
                 letter-spacing: 1px;
+                @include mobile-landscape{
+                    font-size: x-small;
+                    margin-top: 4vw;
+                }
                 @include tablet {
                     font-size: smaller;
                     margin-top: 2vw;
@@ -365,6 +426,13 @@
             letter-spacing: 1px;
             padding-top: 1vh;
             padding-bottom: 1vh;
+            @include mobile-landscape{
+                font-size: x-small;
+                height: 4vh;
+                padding-bottom: 2vh;
+                width: 100%;
+                
+            }
             @include notebook {
                 font-size: smaller;
                 height: 3vh;

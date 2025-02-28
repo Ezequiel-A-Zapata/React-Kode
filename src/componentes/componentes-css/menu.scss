@@ -16,6 +16,10 @@
     background: transparent;
     border: none;
     cursor: pointer;
+    @include mobile-landscape {
+        margin-bottom: 5vh;
+        margin-left: 0;
+    }
     @include tablet {
         margin-top: 0;
         margin-bottom: 0;
@@ -30,10 +34,7 @@
         margin: 0;
         width: 5vw;
     }
-    @include mobile-landscape {
-        margin-bottom: 5vh;
-        margin-left: 0;
-    }
+
 
 }
 .nav-bar {
@@ -47,6 +48,9 @@
     transition: left 0.5s ease-in-out, opacity 0.5s ease-in; // Transición suave
     opacity: 0;
     overflow: hidden; // Asegúrate de que no sobresalga contenido durante la animación
+    @include mobile-landscape{
+        width: 60vw; // Reduce el ancho a 40vw
+    }
     @include tablet {
         width: 60vw; // Reduce el ancho a 40vw
     }
@@ -75,6 +79,9 @@
         background: transparent;
         border: none;
         cursor: pointer;
+        @include mobile-landscape{
+            margin: 3% 0 0 0
+        }
         @include tablet {
             margin: 3% 0 0 0
         }

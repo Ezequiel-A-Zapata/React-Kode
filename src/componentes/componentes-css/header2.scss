@@ -14,7 +14,7 @@
         box-shadow: -2px 2px 15px 1px rgb(132, 132, 132);
         transition: background-color 0.3s ease-in-out; 
         @include mobile-landscape  {
-            height:11vh;
+            height:13vh;
         }
         @include tablet {
             height: 7.5vh;

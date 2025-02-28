@@ -7,6 +7,10 @@
     justify-content: center;
     margin-top: 2vh;
     border-top: 1px solid rgb(143, 143, 143);
+    @include mobile-landscape{
+        height: 15vh;
+        gap: 7vw;
+    }
     @include tablet{
         height: 8vh;
         gap: 7vw;
@@ -19,10 +23,7 @@
         height: 10vh;
         gap: 7vw;
     }
-    @include mobile-landscape{
-        height: 15vh;
-        gap: 10vw;
-    }
+
 
     &>a{
         padding: 0%;

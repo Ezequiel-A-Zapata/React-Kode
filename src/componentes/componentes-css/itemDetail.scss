@@ -4,6 +4,12 @@
     width: 100vw;
     height: auto;
     overflow: hidden;
+    @include mobile-landscape{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 9vh;
+        
+    }
     @include tablet {
         display: flex;
         justify-content: space-between;
@@ -25,6 +31,10 @@
     .imagen-container{
         position: relative;
         margin-bottom: 4vh;
+        @include mobile-landscape{
+            display: flex;
+            margin-left: 8vw;
+        }
         @include tablet {
             display: flex;
             margin-left: 8vw;
@@ -51,6 +61,9 @@
             justify-content: center;
             align-items: center;
             color: rgb(151, 112, 12);
+            @include mobile-landscape {
+                left: -4vh;
+            }
             @include tablet {
                 left: -2vh;
             }
@@ -75,6 +88,9 @@
             justify-content: center;
             align-items: center;
             color: rgb(151, 112, 12);
+            @include mobile-landscape {
+                right: -4vh;
+            }
             @include tablet {
                 right: -2vh;
             }
@@ -90,6 +106,10 @@
         height: auto;
         box-shadow: 0px 10px 20px 1px rgb(208, 208, 208);
         border-radius: 20px;
+        @include mobile-landscape {
+            height: 110vh;
+            width: auto;
+        }
         @include tablet {
             height: 65vh;
             width: auto;
@@ -116,6 +136,14 @@
         border: solid rgb(100, 83, 24) 1px;
         background-color: rgb(238, 238, 238);
         box-shadow: 0px 10px 20px 1px rgb(208, 208, 208);
+        @include mobile-landscape {
+            width: 40vw;
+            margin-right: 2vw;
+            height: 80vh;
+            align-items: start;
+            font-size: small;
+            margin-left: 2vw;
+        }
         @include tablet {
             width: 35vw;
             margin-right: 2vw;
@@ -148,6 +176,12 @@
             margin-left: 5%;
             margin-top: 2vh;
             letter-spacing: 1px;
+            @include mobile-landscape{
+                width: 100%;
+                margin-left: 3vw;
+                margin-top: 2vh;
+                font-size: x-small;
+            }
             @include tablet {
                 width: 100%;
                 margin-left: 3vw;
@@ -175,6 +209,11 @@
             margin-top: 1vh;
             font-weight: 300;
             letter-spacing: 1px;
+            @include mobile-landscape{
+                width: 20vw;
+                margin-left: 3vw;
+                font-size: x-small;
+            }
             @include tablet {
                 width: 20vw;
                 margin-left: 3vw;
@@ -200,6 +239,12 @@
             max-width: 90%;
             margin-top: 3vh;
             margin-left: 0;
+            @include mobile-landscape {
+                margin-top: 5vh;
+                max-width: 80%;
+                margin-left: 3vw;
+                font-size: xx-small;
+            }
             @include tablet {
                 margin-top: 5vh;
                 max-width: 80%;
@@ -233,6 +278,15 @@
             padding-bottom: 2%;
             width: 80%;
             border-radius: 10px;
+            @include mobile-landscape{
+                margin-left: 3vw;
+                margin-top: 5vh;
+                font-size: smaller;
+                &:hover{
+                    background-color: black;
+                    color: white;
+                }
+            }
             @include tablet {
                 margin-left: 3vw;
                 margin-top: 5vh;

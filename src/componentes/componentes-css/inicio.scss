@@ -4,6 +4,10 @@
     align-items: center;
     gap: 0.3vh;
     position: relative;
+    @include mobile-landscape{
+        flex-direction: row;
+        height: 100vh;
+    }
     @include tablet {
         flex-direction: row;
         height: 100vh;
@@ -17,6 +21,11 @@
         height: 100vh;
     }
     .contenedor-imagenes{
+        @include mobile-landscape{
+            display:flex;
+            position: fixed;
+            z-index: 1;
+        }
         @include tablet{
             display:flex;
             position: fixed;
@@ -41,6 +50,12 @@
         opacity: 90%;
         overflow: hidden;
         transition: scale 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        @include mobile-landscape{
+            &:hover {
+                scale: 95%;
+                opacity: 80%;
+            }
+        }
         @include tablet{
             &:hover {
                 scale: 95%;
